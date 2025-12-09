@@ -13,463 +13,1114 @@
   <!-- Open Graph (LinkedIn, Slack, etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OpsFlo">
-  <meta property="og:title" content="OpsFlo — Where Operations Find Flow">
-  <meta property="og:description" content="We turn fragmented operations into a resilient, data-driven supply chain that scales profitably and sustainably.">
+  <meta property="og:title" content="OpsFlo — Where Operations Finds Flow">
+  <meta property="og:description" content="Fractional COO & supply chain leadership for growth-stage CPG and DTC brands. We turn fragmented operations into a resilient, data-driven supply chain that scales profitably and sustainably.">
   <meta property="og:url" content="https://opsflo.co/">
-  <meta property="og:image" content="https://opsflo.co/assets/opsflo-social-banner.png">
-  <meta property="og:image:alt" content="OpsFlo social preview banner">
+  <meta property="og:image" content="https://opsflo.co/assets/opsflo-og-image.png">
 
-  <!-- Twitter / X -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="OpsFlo — Where Operations Find Flow">
-  <meta name="twitter:description" content="We turn fragmented operations into a resilient, data-driven supply chain that scales profitably and sustainably.">
-  <meta name="twitter:image" content="https://opsflo.co/assets/opsflo-social-banner.png">
+  <meta name="twitter:title" content="OpsFlo — Where Operations Finds Flow">
+  <meta name="twitter:description" content="Fractional COO & supply chain leadership for growth-stage CPG and DTC brands.">
+  <meta name="twitter:image" content="https://opsflo.co/assets/opsflo-og-image.png">
 
-  <!-- Outcomes WebPage Schema (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "OpsFlo Outcomes",
-    "url": "https://opsflo.co/#outcomes",
-    "description": "Measurable results from real-world implementations across fulfillment, logistics, CX, inventory accuracy, and supply chain cost reduction.",
-    "about": [
-      "supply chain optimization",
-      "logistics performance",
-      "3PL onboarding and RFPs",
-      "inventory accuracy",
-      "COGS reduction",
-      "customer experience improvement"
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "OpsFlo",
-      "url": "https://opsflo.co"
-    }
-  }
-  </script>
+  <!-- Favicon (update path if needed) -->
+  <link rel="icon" type="image/png" href="assets/opsflo-favicon.png">
 
-  <!-- Browser UI color -->
-  <meta name="theme-color" content="#041E33">
-
-  <!-- Preload & Favicons -->
-  <link rel="preload" href="assets/opsflo-logo.png" as="image">
-  <link rel="icon" type="image/png" sizes="32x32"  href="/assets/favicon-tight.png?v=9">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-512.png?v=9">
-  <link rel="apple-touch-icon" sizes="180x180"      href="/assets/favicon-512.png?v=9">
-  <link rel="shortcut icon" type="image/png"        href="/assets/favicon-tight.png?v=9">
-
-  <!-- Site CSS -->
+  <!-- Simple styling -->
   <style>
     :root {
-      --navy: #041E33;
-      --navy-2: #071c2d;
-      --teal: #0d6efd;
-      --slate: #4F5B66;
-      --white: #FFFFFF;
-      --ice: #f3f7fb;
-      --line: #e6eef5;
-      --success: #12b76a;
-      --muted: #9fb0c2;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family: Inter, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--slate);background:var(--white)}
-    a{text-decoration:none}
-
-    /* Header */
-    header{background:var(--navy);color:var(--white);}
-    .wrap{max-width:1160px;margin:0 auto;padding:18px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-    .left{display:flex;align-items:center;gap:10px}
-    .logo{height:40px;width:auto;border-radius:6px;object-fit:contain}
-    .brand{font-weight:800;font-size:20px;letter-spacing:.2px;margin-right:auto}
-    nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    nav a{font-weight:600;opacity:.95;color:#e6f0ff;padding:8px 10px;border-radius:10px}
-    .cta-btn{background:var(--teal);color:var(--white);padding:10px 14px;border-radius:10px;font-weight:700;white-space:nowrap}
-    .cta-outline{border:1px solid #9cc4ff;color:#e6f0ff;padding:9px 13px;border-radius:10px;font-weight:700;white-space:nowrap}
-    .tag{color:#a7d1ff;font-size:13px;margin-left:auto}
-
-    /* Hero */
-    .hero{padding:72px 16px;background:linear-gradient(180deg,var(--navy-2) 0%, var(--navy) 60%);color:var(--white);text-align:center}
-    .hero .inner{max-width:900px;margin:0 auto}
-    .hero h1{margin:0 0 12px;font-size:40px;line-height:1.15}
-    .hero p{max-width:760px;margin:0 auto 22px;font-size:17px;line-height:1.6;color:#d7e6f5}
-    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
-    .row a{min-width:180px;text-align:center}
-    .hero-note{color:#9fc1ea;margin-top:8px}
-
-    /* Sections */
-    section.section{padding:48px 16px;max-width:1160px;margin:0 auto}
-    h2{color:var(--navy);margin:0 0 10px;font-size:24px}
-    .sub{margin:0 0 16px;color:#3f4b56}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fbfdff}
-    .card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
-    .card p{margin:0;font-size:15px;line-height:1.6}
-
-    /* KPIs */
-    .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-    .kpi{background:#0a2236;color:#e9f2fb;padding:16px;border-radius:12px}
-    .num{font-size:26px;font-weight:800;color:#fff}
-
-    /* Case studies */
-    .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .case{border:1px solid var(--line);border-radius:14px;padding:16px;background:#ffffff}
-    .case h3{margin:0 0 8px;color:var(--navy);font-size:18px}
-    .badge{display:inline-block;background:#eef5ff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700;font-size:12px;color:#274690;margin-bottom:8px}
-    .impact{margin-top:8px;color:#1f3b57}
-
-    /* Brands */
-    .brands{background:#0d2232;padding:20px 12px;text-align:center}
-    .brands h3{color:#cfe3f9;margin:0 0 12px;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
-    .brands-list{display:flex;flex-wrap:wrap;gap:18px 22px;align-items:center;justify-content:center;margin:0;padding:0;list-style:none}
-    .brands-list li{margin:0;padding:0;display:flex;align-items:center}
-    .brands-list li::before,.brands-list li::marker{content:none !important}
-    .brands-list span{font-size:18px;font-weight:700;color:#e6edf3;white-space:nowrap}
-
-    /* Bio */
-    .bio{padding:36px 16px;max-width:980px;margin:0 auto}
-    .bio .title{color:var(--navy);font-size:22px;margin:0 0 8px}
-    .bio p{margin:0;color:#334155;line-height:1.7}
-    .bio .links{margin-top:10px}
-    .bio a{color:#0b7cff;text-decoration:underline}
-
-    /* Discovery CTA (classic look) */
-    #discovery.cta {
-      background: var(--ice);
-      padding: 84px 0;
-      border-top: 1px solid rgba(0,0,0,.04);
-      border-bottom: 1px solid rgba(0,0,0,.04);
-    }
-    #discovery .cta-inner { max-width:1080px; margin:0 auto; text-align:center; padding:0 16px; }
-    #discovery h2{ color:#0f172a; font-size:48px; line-height:1.1; font-weight:800; letter-spacing:-0.02em; margin:0 0 14px; }
-    #discovery .cta-sub{ color:#475f75; font-size:22px; margin:0 auto 26px; max-width:980px; }
-    #discovery .cta-actions{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-    #discovery .btn{ display:inline-flex; align-items:center; justify-content:center; padding:16px 24px; border-radius:14px; font-weight:800; text-decoration:none; transition:all .2s ease; min-width:300px; }
-    #discovery .btn-primary{ background:#1665ff; color:#fff; box-shadow:0 10px 28px rgba(22,101,255,.25); }
-    #discovery .btn-primary:hover{ transform:translateY(-1px); filter:brightness(1.05); }
-    #discovery .btn-secondary{ background:rgba(22,101,255,.06); color:rgba(22,101,255,.65); border:1px solid rgba(22,101,255,.25); }
-    #discovery .btn-secondary:hover{ background:rgba(22,101,255,.1); color:rgba(22,101,255,.85); border-color:rgba(22,101,255,.35); }
-    #discovery .cta-tags{ margin-top:28px; color:#0f172a; font-size:.95rem; }
-    #discovery .pill{ border:1px solid rgba(0,0,0,.08); border-radius:999px; padding:8px 16px; display:inline-block; margin:4px 6px; background:#fff; color:#2a3b4b; }
-    #discovery .ok{ color:#1ecf7a; margin-right:8px; }
-    @media (max-width:640px){
-      #discovery.cta{ padding:60px 0; }
-      #discovery h2{ font-size:34px; }
-      #discovery .cta-sub{ font-size:18px; }
-      #discovery .btn{ width:100%; min-width:0; }
+      --bg: #0b1120;
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.12);
+      --accent-border: rgba(34, 197, 94, 0.4);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.25);
+      --border-strong: rgba(148, 163, 184, 0.4);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-xl: 20px;
+      --radius-pill: 999px;
+      --max-width: 1120px;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Segoe UI", sans-serif;
     }
 
-    /* Outcomes */
-    #outcomes .section-sub{
-      margin:6px 0 22px;
-      color:#6b7c8f;
-      font-size:1rem;
-      line-height:1.5;
-    }
-    @media (max-width:640px){
-      #outcomes .section-sub{font-size:.95rem;margin-bottom:18px;}
-    }
-    .muted{ color:#6b7c8f; }
-    #outcomes .card h3{ color:#fff; font-size:1.6rem; font-weight:700; margin-bottom:6px; }
-    #outcomes .card p{ color:rgba(255,255,255,.85); font-size:1rem; line-height:1.4; }
-    #outcomes .card{
-      background:linear-gradient(180deg, var(--navy-2), var(--navy));
-      border:1px solid rgba(255,255,255,.05);
-      box-shadow:0 4px 10px rgba(0,0,0,.1);
-      transform:translateY(18px);
-      opacity:0;
-      transition:opacity .55s ease, transform .6s ease;
-      transition-delay:var(--stagger, 0ms);
-    }
-    #outcomes .card.is-visible{ opacity:1; transform:translateY(0); }
-    #outcomes .card:hover{ transform:translateY(-4px); box-shadow:0 6px 15px rgba(0,0,0,.15); }
-    @media (prefers-reduced-motion:reduce){
-      #outcomes .card{ transition:none; transform:none; opacity:1; }
+    * {
+      box-sizing: border-box;
     }
 
-    /* Footer */
-    footer{background:#071c2d;color:#c9d7e6;padding:18px 16px;text-align:center;font-size:14px}
-    .footer-inner{max-width:1160px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .foot-left{opacity:.95}
-    .social{display:flex;gap:10px;align-items:center}
-    .social a{display:inline-flex;align-items:center;justify-content:center;height:36px;width:36px;border-radius:8px;border:1px solid #28405a}
-    .social svg{height:18px;width:18px;fill:#e6f0ff}
-    .social a:hover{background:#0a2236}
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at top, #1f2937 0, #020617 48%, #000 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
 
-    /* Mobile tweaks */
-    @media (max-width: 640px){
-      .brand{font-size:18px}
-      .tag{width:100%;margin-left:0;margin-top:4px;text-align:left}
-      nav{width:100%}
-      .hero h1{font-size:34px}
-      .hero p{font-size:16px}
-      .row a{flex:1}
-      .brands-list span{font-size:16px}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 16px 72px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 16px;
+      margin: 0 -16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(2, 6, 23, 0.96),
+        rgba(2, 6, 23, 0.82),
+        transparent
+      );
+      border-bottom: 1px solid rgba(15, 23, 42, 0.85);
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: radial-gradient(circle at 20% 0%, #22c55e 0, #16a34a 32%, #15803d 60%, #22c55e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 28px rgba(22, 163, 74, 0.5);
+    }
+
+    .logo-mark span {
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.08em;
+      color: #ecfdf5;
+      transform: translateY(-0.5px);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      font-size: 17px;
+    }
+
+    .logo-text-tagline {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .nav-link {
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+      cursor: pointer;
+    }
+
+    .nav-link:hover {
+      border-color: rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.8);
+      color: #e5e7eb;
+    }
+
+    .nav-cta {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--accent-border);
+      background: radial-gradient(circle at 0 0, #22c55e 0, #22c55e 18%, #16a34a 46%, #15803d 90%);
+      color: #ecfdf5;
+      font-size: 11px;
+      font-weight: 600;
+      box-shadow: 0 14px 30px rgba(22, 163, 74, 0.5);
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      filter: brightness(1.05);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 32px;
+      margin-top: 32px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header {
+        flex-wrap: wrap;
+      }
+      nav {
+        width: 100%;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+      }
+    }
+
+    .hero-main {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 11px;
+      color: var(--muted);
+      width: fit-content;
+    }
+
+    .hero-pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.3);
+    }
+
+    .hero-pill span {
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3.1vw, 2.8rem);
+      font-weight: 650;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #22c55e, #a3e635);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 560px;
+    }
+
+    .hero-subtitle strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .btn-primary {
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--accent-border);
+      background: radial-gradient(circle at 0 0, #22c55e 0, #22c55e 18%, #16a34a 46%, #15803d 90%);
+      box-shadow: 0 14px 30px rgba(22, 163, 74, 0.5);
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #ecfdf5;
+    }
+
+    .btn-secondary {
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 9px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-secondary span {
+      font-size: 16px;
+      transform: translateY(1px);
+    }
+
+    .hero-footer {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-metric {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hero-metric-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .hero-metric-label {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-side {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-xl);
+      padding: 14px 14px 16px;
+      background: radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.08), rgba(15, 23, 42, 0.98));
+      border: 1px solid var(--border-strong);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-card-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .hero-card-chip {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #bbf7d0;
+    }
+
+    .hero-card-main {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric-block {
+      padding: 10px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.32);
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .metric-value {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .metric-subtext {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .mini-note {
+      font-size: 11px;
+      color: var(--muted);
+      border-left: 2px solid rgba(148, 163, 184, 0.6);
+      padding-left: 8px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 440px;
+    }
+
+    .pill-inline {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--muted);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      padding: 14px 14px 16px;
+      border-radius: var(--radius-xl);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .card-body {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .card-metrics {
+      margin-top: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: #e5e7eb;
+    }
+
+    .chip-accent {
+      border-color: rgba(34, 197, 94, 0.6);
+      background: rgba(22, 163, 74, 0.14);
+      color: #bbf7d0;
+    }
+
+    .list-compact {
+      padding-left: 16px;
+      margin: 0;
+      list-style: none;
+      display: grid;
+      gap: 4px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .list-compact li::before {
+      content: "•";
+      margin-right: 6px;
+      color: var(--accent);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 840px) {
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .brands-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .brand-tag {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .faq {
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .faq-item {
+      border-radius: 14px;
+      padding: 10px 12px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #e5e7eb;
+      margin-bottom: 4px;
+    }
+
+    .contact-card {
+      border-radius: var(--radius-xl);
+      padding: 16px 16px 18px;
+      background: radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.1), rgba(15, 23, 42, 0.96));
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-decoration-color: rgba(148, 163, 184, 0.7);
+      text-underline-offset: 3px;
+    }
+
+    /* Anchor scroll behavior */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="wrap">
-      <div class="left">
-        <img class="logo" src="assets/opsflo-logo.png" alt="OpsFlo logo" onerror="this.style.display='none'" />
-        <div class="brand">OpsFlo</div>
+  <main>
+    <header>
+      <div class="logo-wrap">
+        <div class="logo-mark">
+          <span>OF</span>
+        </div>
+        <div class="logo-text">
+          <div class="logo-text-main">OpsFlo</div>
+          <div class="logo-text-tagline">Where operations find flow</div>
+        </div>
       </div>
       <nav>
-        <a href="#services">Services</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#outcomes">Outcomes</a>
-        <a href="#cases">Case Studies</a>
-        <a href="#discovery" class="cta-btn">Book a call</a>
-        <a class="cta-outline" href="https://calendly.com/opsflo-consulting/15min" target="_blank" rel="noopener">Calendly</a>
+        <a href="#outcomes" class="nav-link">Outcomes</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#cases" class="nav-link">Case Studies</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-cta">Schedule a call</a>
       </nav>
-      <div class="tag">Operational &amp; Supply Chain Strategy</div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="inner">
-      <h1>Where Operations Find Flow.</h1>
-      <p>OpsFlo provides fractional operations and supply chain leadership for growth-stage CPG and DTC brands. We turn fragmented operations into a resilient, data-driven supply chain that scales profitably and sustainably.</p>
-      <div class="row">
-        <a class="cta-btn" href="#discovery">Contact us</a>
-        <a class="cta-outline" href="https://calendly.com/opsflo-consulting/15min" target="_blank" rel="noopener">Schedule on Calendly</a>
-      </div>
-      <div class="hero-note">🌴 Based in Los Angeles. Partnering with brands worldwide.</div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section">
-    <h2 class="section-title">Services</h2>
-    <div class="wave-divider"></div>
-    <p class="sub">Engage as fractional leadership, project execution, or advisory.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Network design &amp; fulfillment</h3>
-        <p>2-node vs 3-node, inventory placement, zip-code routing, and carrier strategy to cut time-in-transit and cost.</p>
-      </div>
-      <div class="card">
-        <h3>3PL search, RFP &amp; SLAs</h3>
-        <p>Run the RFP, negotiate terms, set SLAs/KPIs, and stand up onboarding without disrupting day-to-day.</p>
-      </div>
-      <div class="card">
-        <h3>ERP/WMS &amp; data visibility</h3>
-        <p>Roadmap, vendor selection, EDI/compliance, order orchestration, and real-time dashboards.</p>
-      </div>
-      <div class="card">
-        <h3>COGS &amp; margin improvement</h3>
-        <p>Packaging, carrier mix, vendor terms, and landed-cost modeling to unlock contribution margin.</p>
-      </div>
-      <div class="card">
-        <h3>Quality &amp; retailer compliance</h3>
-        <p>SOPs, audits, CAPA, routing guides, chargeback prevention, and OTIF performance.</p>
-      </div>
-      <div class="card">
-        <h3>Customer delivery experience</h3>
-        <p>“Where’s my order” reduction, promise-date accuracy, proactive comms, and NPS lift.</p>
-      </div>
-      <div class="card">
-        <h3>CX management &amp; overhaul</h3>
-        <p>Rebuild customer experience operations, integrate feedback loops, and optimize workflows to enhance response times, satisfaction, and retention.</p>
-      </div>
-      <div class="card">
-        <h3>Contract manufacturer audits &amp; negotiations</h3>
-        <p>Conduct factory audits, assess compliance and quality standards, and lead commercial negotiations to ensure value alignment and supply reliability.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section id="how-it-works" class="section">
-    <h2>How It Works — Flexible by Design</h2>
-    <p class="sub">From operational analysis to fractional leadership and systems that scale, we plug in where you need the most leverage.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>1️⃣ Operational Analysis</h3>
-        <p>We quickly assess your end-to-end operations to uncover performance gaps, cost savings, and opportunities to scale smarter.</p>
-      </div>
-      <div class="card">
-        <h3>2️⃣ Fractional &amp; Project Support</h3>
-        <p>OpsFlo steps in hands-on to build systems, strengthen vendors, and align teams for speed, efficiency, and margin.</p>
-      </div>
-      <div class="card">
-        <h3>3️⃣ Build for Growth</h3>
-        <p>We leave behind a stronger, clearer operation — built to sustain growth with or without continued support.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Outcomes -->
-  <section id="outcomes" class="section">
-    <h2>Outcomes</h2>
-    <p class="section-sub">Measurable results from real-world implementations.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>97–99%</h3>
-        <p>OTIF for DTC &amp; retail</p>
-      </div>
-      <div class="card">
-        <h3>12–20%</h3>
-        <p>Parcel &amp; freight cost savings</p>
-      </div>
-      <div class="card">
-        <h3>25–40%</h3>
-        <p>Faster delivery through multi-node network</p>
-      </div>
-      <div class="card">
-        <h3>9–16 wks</h3>
-        <p>3PL RFP, onboarding &amp; go-live</p>
-      </div>
-      <div class="card">
-        <h3>98–99%</h3>
-        <p>Inventory accuracy &amp; faster close <span class="muted">(ERP)</span></p>
-      </div>
-      <div class="card">
-        <h3>4.8★</h3>
-        <p>CSAT after CX overhaul &amp; AI-assisted support</p>
-      </div>
-      <div class="card">
-        <h3>8–12%</h3>
-        <p>COGS reduction via supply chain redesign</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Studies -->
-  <section id="cases" class="section">
-    <h2>Case Studies</h2>
-    <p class="sub">A few representative engagements and outcomes.</p>
-    <div class="cases">
-      <div class="case">
-        <span class="badge">CPG Brand</span>
-        <h3>Carrier &amp; zone optimization</h3>
-        <p>Consolidated carrier portfolio and remapped zones to align with demand density.</p>
-        <p class="impact"><strong>Result:</strong> Cut parcel spend by <strong>28%</strong> and reduced average transit time by 1.1 days.</p>
-      </div>
-      <div class="case">
-        <span class="badge">Beauty Brand</span>
-        <h3>3PL performance turnaround</h3>
-        <p>Defined OTIF, pick/pack accuracy, and dock-to-stock SLAs with a simple scorecard and weekly QBR cadence.</p>
-        <p class="impact"><strong>Result:</strong> OTIF improved from <strong>89%</strong> to <strong>98%</strong> in 60 days; chargebacks down 40%.</p>
-      </div>
-      <div class="case">
-        <span class="badge">Apparel Brand</span>
-        <h3>Multi-node scale-up</h3>
-        <p>Transitioned from 1 to 3 nodes; rebalanced inventory and automated order routing.</p>
-        <p class="impact"><strong>Result:</strong> Delivery times reduced <strong>45%</strong>; annual savings of <strong>$1.2M</strong>.</p>
-      </div>
-      <div class="case">
-        <span class="badge">Health &amp; Wellness Brand</span>
-        <h3>COGS reduction via coman &amp; packaging redesign</h3>
-        <p>Renegotiated co-manufacturing terms and redesigned packaging to improve cube efficiency and material yield.</p>
-        <p class="impact"><strong>Result:</strong> Reduced COGS by <strong>12%</strong> while maintaining quality and retailer compliance.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Brands -->
-  <section class="brands" aria-label="Brands we've supported">
-    <h3>Brands we've supported</h3>
-    <ul class="brands-list">
-      <li><span>Avon</span></li>
-      <li><span>Pepsi</span></li>
-      <li><span>Loot Crate</span></li>
-      <li><span>Therabody</span></li>
-      <li><span>AG1</span></li>
-      <li><span>Beautycounter</span></li>
-      <li><span>Jaanuu</span></li>
-      <li><span>Set Active</span></li>
-    </ul>
-  </section>
-
-  <!-- Bio -->
-  <section class="bio" aria-label="Founder bio">
-    <h2 class="title">About Travis Edwards</h2>
-    <p>Prior to launching OpsFlo, I led operations, supply chain, and fulfillment strategy for a range of dynamic consumer brands across CPG, wellness, beauty, and apparel. These experiences helped shape the expertise and insight that drive OpsFlo’s approach today.</p>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/travis-edwards-b594805/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-      &nbsp;•&nbsp;
-      <a href="mailto:Travis@opsflo.co">Travis@opsflo.co</a>
-    </div>
-  </section>
-
-  <!-- Discovery CTA -->
-  <section id="discovery" class="cta">
-    <div class="cta-inner">
-      <h2>Start with a 15-minute discovery</h2>
-      <p class="cta-sub">Cut through the noise, fix what’s slowing you down, and get a 90-day ops plan built for startup speed.</p>
-
-      <div class="cta-actions">
-        <a
-          class="btn btn-primary"
-          href="mailto:Travis@opsflo.co?subject=Discovery%20Call%20Request"
-          aria-label="Email Travis at OpsFlo"
-        >Email Travis@opsflo.co</a>
-
-        <a
-          class="btn btn-secondary"
-          href="https://calendly.com/opsflo-consulting/15min"
-          target="_blank" rel="noopener"
-          aria-label="Book your discovery call on Calendly"
-        >Schedule on Calendly</a>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-main">
+        <div class="hero-pill">
+          <div class="hero-pill-dot"></div>
+          <span>Fractional COO & supply chain leadership for CPG & DTC brands</span>
+        </div>
+        <h1 class="hero-title">
+          We turn fragmented operations into a
+          <span>profitable, predictable</span> supply chain.
+        </h1>
+        <p class="hero-subtitle">
+          OpsFlo plugs in as your <strong>fractional VP/COO of Operations</strong> —
+          owning supply chain, fulfillment, 3PL, CX, and contract manufacturing so you can
+          scale <strong>without</strong> burning cash, customers, or your team.
+        </p>
+        <div class="hero-ctas">
+          <a href="YOUR_CALENDLY_LINK" class="btn-primary" target="_blank" rel="noreferrer">
+            Book an OpsFlo intro
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <span>↗</span> Get an operations audit
+          </a>
+        </div>
+        <div class="hero-footer">
+          <div class="hero-metrics">
+            <div class="hero-metric">
+              <div class="hero-metric-value">12–20%</div>
+              <div class="hero-metric-label">Parcel & freight cost reduction</div>
+            </div>
+            <div class="hero-metric">
+              <div class="hero-metric-value">25–40%</div>
+              <div class="hero-metric-label">Faster delivery speed</div>
+            </div>
+            <div class="hero-metric">
+              <div class="hero-metric-value">4.8★</div>
+              <div class="hero-metric-label">CSAT after CX & AI revamp</div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="cta-tags">
-        <span class="pill"><span class="ok">●</span> Fractional • Project • Advisory</span>
-        <span class="pill">US &amp; global 3PLs</span>
-        <span class="pill">DTC &amp; retail</span>
-      </div>
-    </div>
-  </section>
+      <aside class="hero-side">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-title">OpsFlo Outcomes Snapshot</div>
+            <div class="hero-card-chip">Founder-led brands · 8–9 figure scale</div>
+          </div>
+          <div class="hero-card-main">
+            <div class="metric-block">
+              <div class="metric-label">Network & 3PL</div>
+              <div class="metric-value">–28% parcel spend</div>
+              <div class="metric-subtext">with a West Coast 3PL shift and optimized SLA design.</div>
+            </div>
+            <div class="metric-block">
+              <div class="metric-label">Inventory & OTIF</div>
+              <div class="metric-value">98–99% accuracy</div>
+              <div class="metric-subtext">plus OTIF lift from 89% → 98% within 2 quarters.</div>
+            </div>
+            <div class="metric-block">
+              <div class="metric-label">COGS & Co-Man</div>
+              <div class="metric-value">–12% COGS</div>
+              <div class="metric-subtext">via co-man negotiation & packaging redesign in Health & Wellness.</div>
+            </div>
+            <div class="metric-block">
+              <div class="metric-label">CX & AI Ops</div>
+              <div class="metric-value">4.8 CSAT</div>
+              <div class="metric-subtext">after CX overhaul, AI-assisted support, and clean policy design.</div>
+            </div>
+          </div>
+          <div class="mini-note">
+            Built with founder-led teams in Food & Bev, Supplements, Beauty, Apparel,
+            and omni-channel CPG brands.
+          </div>
+        </div>
+      </aside>
+    </section>
 
-  <!-- Footer with icons -->
-  <footer>
-    <div class="footer-inner">
-      <div class="foot-left">© 2025 OpsFlo — Founded by Travis Edwards</div>
-      <div class="social">
-        <a href="mailto:Travis@opsflo.co" aria-label="Email">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/travis-edwards-b594805/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 3A2.94 2.94 0 0 1 22 6v12a2.94 2.94 0 0 1-3 3H5a2.94 2.94 0 0 1-3-3V6a2.94 2.94 0 0 1 3-3h14zm-9.6 16.2V10.1H7v9.1h2.4zM8.2 9a1.4 1.4 0 1 0 0-2.8A1.4 1.4 0 0 0 8.2 9zM19 19.2v-5c0-2.7-1.4-4-3.4-4-1.6 0-2.3.9-2.7 1.5V10H10v9.2h2.4v-4.9c0-1.3.2-2.5 1.9-2.5s1.7 1.4 1.7 2.6v4.8H19z"/>
-          </svg>
-        </a>
+    <!-- Outcomes -->
+    <section id="outcomes">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Outcomes, not busywork</div>
+          <h2 class="section-title">OpsFlo focuses on the KPIs founders actually feel.</h2>
+        </div>
+        <div class="section-subtitle">
+          We plug into your leadership team and own the operational roadmap —
+          from <strong>cash conversion</strong> and <strong>inventory health</strong>
+          to <strong>delivery speed</strong> and <strong>customer experience</strong>.
+        </div>
       </div>
-    </div>
-  </footer>
 
-  <!-- Outcomes Fade-up Animation Script -->
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-kicker">Cost & cash</div>
+          <div class="card-title">Make every shipment earn its keep.</div>
+          <div class="card-body">
+            <ul class="list-compact">
+              <li>12–20% reduction in parcel & freight cost through network design, 3PL selection, and smarter rate cards.</li>
+              <li>8–12% COGS reduction via co-man bids, MOQ + run-size strategy, and packaging redesign.</li>
+              <li>Cleaner landed margin and improved cash conversion cycles.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-kicker">Speed & reliability</div>
+          <div class="card-title">Fast, predictable, boringly reliable ops.</div>
+          <div class="card-body">
+            <ul class="list-compact">
+              <li>25–40% faster delivery time with optimized node placement and SLA design.</li>
+              <li>OTIF moving from high 80s → high 90s by tightening SOPs and accountability.</li>
+              <li>Inventory turns aligned to demand instead of fear-based buying.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-kicker">CX & lifetime value</div>
+          <div class="card-title">Customers feel the difference.</div>
+          <div class="card-body">
+            <ul class="list-compact">
+              <li>4.8 CSAT after CX overhaul and AI implementation (macros, intent tagging, and self-serve flows).</li>
+              <li>Lower WISMO tickets through proactive comms and clearer promises.</li>
+              <li>Refunds and reships driven by data, not guesswork.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">What we own</div>
+          <h2 class="section-title">End-to-end operations, from co-man to customer inbox.</h2>
+        </div>
+        <div class="section-subtitle">
+          Think of OpsFlo as your <strong>fractional VP/COO of Operations</strong> —
+          hands-on in the details, plugged into strategy, and allergic to vanity projects.
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-kicker">Supply chain & network</div>
+          <div class="card-title">Supply chain design that matches your growth.</div>
+          <div class="card-body">
+            <ul class="list-compact">
+              <li>End-to-end network design (nodes, carriers, service levels).</li>
+              <li>3PL RFPs, contract negotiation, and SLA design that actually bites.</li>
+              <li>DC start-ups, transitions, and performance rescue work.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">Contract manufacturing & COGS</div>
+          <div class="card-title">Co-man relationships that protect margin.</div>
+          <div class="card-body">
+            <ul class="list-compact">
+              <li>Co-man sourcing and bid management for Food & Bev, Supplements, and Beauty.</li>
+              <li>12%+ COGS reduction via volume strategy, line optimization, and packaging redesign.</li>
+              <li>Quality, compliance, and change-control discipline without slowing launches.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">Fulfillment & last mile</div>
+          <div class="card-title">3PLs that behave like true partners.</div>
+          <div class="card-body">
+            <ul class="list-compact">
+              <li>3PL selection, onboarding, and governance (scorecards, QBRs, SLAs).</li>
+              <li>Pick/pack optimization, packaging standards, and dock-to-door playbooks.</li>
+              <li>Retail & wholesale routing compliance to protect sell-in and on-time performance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">Systems & data</div>
+          <div class="card-title">Data that founders can actually act on.</div>
+          <div class="card-body">
+            <ul class="list-compact">
+              <li>ERP & WMS selection, implementation support, and clean handoffs.</li>
+              <li>Single source of truth for demand, inventory, and orders.</li>
+              <li>KPI dashboards that tie ops to P&L, not just “ops for ops’ sake.”</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">CX & AI operations</div>
+          <div class="card-title">Customer experience that matches your brand.</div>
+          <div class="card-body">
+            <ul class="list-compact">
+              <li>CX org design, staffing models, and scheduling for peaks and promos.</li>
+              <li>AI-assisted support (macros, intents, auto-responses) that reduces handle time.</li>
+              <li>Policy & playbooks that reduce refunds and reships without damaging trust.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">Fractional leadership</div>
+          <div class="card-title">Senior ops leadership without a full-time burn.</div>
+          <div class="card-body">
+            <ul class="list-compact">
+              <li>Fractional COO / VP Ops for founder-led brands in the $20M–$200M range.</li>
+              <li>Interim leadership during transitions, PE involvement, or hypergrowth.</li>
+              <li>Coaching and upleveling existing ops leaders and managers.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="cases">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Case studies</div>
+          <h2 class="section-title">Representative work with founder-led brands.</h2>
+        </div>
+        <div class="section-subtitle">
+          Names kept discrete — metrics are real. OpsFlo has led ops across Food & Bev,
+          Supplements, Beauty, Apparel, and omni-channel CPG brands.
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-kicker">Food & Bev — DTC + Retail</div>
+          <div class="card-title">Network redesign & 3PL shift.</div>
+          <div class="card-body">
+            <p>
+              Moved from a single coastal DC to a 2-node network, re-bid parcel + LTL, and rebuilt SLAs.
+            </p>
+            <div class="card-metrics">
+              <span class="chip chip-accent">–28% parcel spend</span>
+              <span class="chip">–18% freight cost</span>
+              <span class="chip">34% faster delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">Beauty — Omnichannel</div>
+          <div class="card-title">3PL rescue & OTIF improvement.</div>
+          <div class="card-body">
+            <p>
+              Stabilized 3PL performance for DTC + retail, implemented clear SOPs and performance scorecards.
+            </p>
+            <div class="card-metrics">
+              <span class="chip chip-accent">OTIF 89% → 98%</span>
+              <span class="chip">–25% chargebacks</span>
+              <span class="chip">Fewer escalations to founder/CEO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">Apparel — DTC</div>
+          <div class="card-title">Inventory health & pre-order discipline.</div>
+          <div class="card-body">
+            <p>
+              Built an inventory & allocation playbook for frequent drops, collabs, and pre-orders.
+            </p>
+            <div class="card-metrics">
+              <span class="chip chip-accent">98–99% inventory accuracy</span>
+              <span class="chip">–32% stockouts on key SKUs</span>
+              <span class="chip">–20% aged inventory</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">Health & Wellness — Supplements</div>
+          <div class="card-title">COGS reduction + packaging redesign.</div>
+          <div class="card-body">
+            <p>
+              Ran a structured co-man RFP, re-set MOQs, and partnered on a packaging refresh that preserved brand while cutting cost.
+            </p>
+            <div class="card-metrics">
+              <span class="chip chip-accent">–12% COGS</span>
+              <span class="chip">Improved line efficiency</span>
+              <span class="chip">Cleaner margin on hero SKUs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">Health & Wellness — CX + AI</div>
+          <div class="card-title">CX overhaul and AI implementation.</div>
+          <div class="card-body">
+            <p>
+              Rebuilt CX workflows, implemented AI-assisted responses, and tightened policy around reships, refunds, and discounts.
+            </p>
+            <div class="card-metrics">
+              <span class="chip chip-accent">4.8 CSAT</span>
+              <span class="chip">–22% average handle time</span>
+              <span class="chip">–30% WISMO tickets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">Multi-brand portfolio</div>
+          <div class="card-title">Fractional COO across brands.</div>
+          <div class="card-body">
+            <p>
+              Stepped in as fractional COO to unify ops across multiple brands and channels under one portfolio.
+            </p>
+            <div class="card-metrics">
+              <span class="chip chip-accent">Shared ops playbook</span>
+              <span class="chip">Centralized KPIs</span>
+              <span class="chip">Lean team, higher output</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Process -->
+    <section id="about">
+      <div class="two-col">
+        <div>
+          <div class="section-kicker">About OpsFlo</div>
+          <h2 class="section-title">Built by an operator who’s lived inside the chaos.</h2>
+          <p class="section-subtitle">
+            OpsFlo was founded by an operations and supply-chain leader who has owned
+            <strong>global logistics, 3PLs, CX, and inventory</strong> for fast-growing,
+            founder-led brands across CPG, DTC, and omnichannel.
+          </p>
+          <div class="brands-row">
+            <span class="brand-tag">Food & Bev</span>
+            <span class="brand-tag">Supplements</span>
+            <span class="brand-tag">Beauty & Personal Care</span>
+            <span class="brand-tag">Apparel & Lifestyle</span>
+            <span class="brand-tag">Retail & Wholesale</span>
+          </div>
+          <p style="margin-top:10px; font-size:13px; color:var(--muted);">
+            The goal is simple: give founders a partner they can text when ops get messy —
+            and then quietly fix the mess with a mix of strategy, systems, and on-the-ground execution.
+          </p>
+        </div>
+
+        <div>
+          <div class="section-kicker">How we work</div>
+          <h3 style="font-size:15px; margin:0 0 8px; font-weight:600; letter-spacing:-0.02em;">
+            A simple, low-friction engagement model.
+          </h3>
+          <div class="faq">
+            <div class="faq-item">
+              <div class="faq-q">1. Diagnose</div>
+              <div>
+                We start with a focused diagnostic across your network, 3PLs, inventory,
+                and CX — anchored to your P&L and growth goals.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">2. Design</div>
+              <div>
+                We translate that into a 90-day roadmap: quick wins, must-fix risks,
+                and structural changes to protect margin and CX.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">3. Implement</div>
+              <div>
+                We own execution: running 3PL RFPs, aligning co-mans, cleaning data,
+                and building SOPs so nothing lives in one person’s head.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">4. Optimize & handoff</div>
+              <div>
+                Once stable, we either stay on as fractional leadership or build the
+                internal team and systems so you’re no longer dependent on us.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ / Fit -->
+    <section>
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Fit check</div>
+          <h2 class="section-title">Is OpsFlo right for your brand?</h2>
+        </div>
+        <div class="section-subtitle">
+          A good fit is worth months of time saved and millions of dollars of mistakes avoided.
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">What stage brands do you work with?</div>
+            <div>
+              Typically <strong>$20M–$200M+</strong> in annual revenue, with real complexity:
+              multiple channels (DTC, retail, Amazon, wholesale), multiple DCs/3PLs,
+              and active product launches.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">What geographies do you support?</div>
+            <div>
+              North America–first, with experience supporting EU, UK, and APAC distribution
+              through regional 3PLs and cross-border partners.
+            </div>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">How do engagements typically start?</div>
+            <div>
+              Often with a 4–8 week project (network assessment, 3PL RFP, co-man/COGS initiative,
+              or CX/AI overhaul) that can shift into a fractional leadership role if the fit is strong.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">What does it cost?</div>
+            <div>
+              Pricing depends on complexity and scope, but we aim for a clear ROI target:
+              OpsFlo should <strong>pay for itself</strong> in savings, efficiency, or reduced churn
+              within the first 6–12 months.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Next step</div>
+          <h2 class="section-title">Let’s pressure-test your operations together.</h2>
+        </div>
+        <div class="section-subtitle">
+          A short conversation can usually surface where you’re bleeding margin,
+          time, or customer trust — and what to do about it.
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <p style="font-size:13px; color:var(--muted); margin-top:0;">
+          Share a bit about your brand, where ops feel heavy today, and what success
+          would look like 12 months from now. We’ll respond with either a fit check,
+          a few concrete ideas, or a recommendation if we’re not the right partner.
+        </p>
+
+        <div class="contact-actions">
+          <a href="YOUR_CALENDLY_LINK" class="btn-primary" target="_blank" rel="noreferrer">
+            Schedule a 30-min intro
+          </a>
+          <a href="mailto:hello@opsflo.co?subject=OpsFlo%20Intro%20-%20Operations%20Support&body=Tell%20me%20a%20bit%20about%20your%20brand%2C%20revenue%20range%2C%20and%20where%20ops%20feel%20heavy%20today." class="btn-secondary">
+            <span>✉</span> Email OpsFlo
+          </a>
+        </div>
+
+        <div style="font-size:12px; color:var(--muted);">
+          Helpful context to include:
+          <ul class="list-compact" style="margin-top:6px;">
+            <li>Brand category & current revenue range.</li>
+            <li>Key channels (DTC, retail, Amazon, wholesale).</li>
+            <li>Where the pain is showing up today (cost, reliability, CX, co-man, systems).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> OpsFlo. All rights reserved.</div>
+      <div>Built for founder-led CPG & DTC brands that care about execution.</div>
+    </footer>
+  </main>
+
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('#outcomes .card');
-    if (!cards.length) return;
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      cards.forEach(c => c.classList.add('is-visible'));
-      return;
-    }
-
-    cards.forEach((card, i) => {
-      card.style.setProperty('--stagger', `${100 + i * 80}ms`);
-    });
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-
-    cards.forEach(card => io.observe(card));
-  });
+    // Set current year in footer automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
