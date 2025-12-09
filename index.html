@@ -7,6 +7,7 @@
 
   <!-- SEO -->
   <meta name="description" content="OpsFlo provides fractional operations & supply chain leadership for growth-stage CPG and DTC brands. We turn fragmented operations into a resilient, data-driven supply chain that scales profitably and sustainably.">
+  <meta name="keywords" content="supply chain outcomes, logistics KPIs, fulfillment performance, CPG operations, DTC logistics, OTIF improvement, inventory accuracy, 3PL optimization, COGS reduction, CX improvement">
   <link rel="canonical" href="https://opsflo.co/">
 
   <!-- Open Graph (LinkedIn, Slack, etc.) -->
@@ -23,6 +24,30 @@
   <meta name="twitter:title" content="OpsFlo — Where Operations Find Flow">
   <meta name="twitter:description" content="We turn fragmented operations into a resilient, data-driven supply chain that scales profitably and sustainably.">
   <meta name="twitter:image" content="https://opsflo.co/assets/opsflo-social-banner.png">
+
+  <!-- Outcomes WebPage Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "OpsFlo Outcomes",
+    "url": "https://opsflo.co/#outcomes",
+    "description": "Measurable results from real-world implementations across fulfillment, logistics, CX, inventory accuracy, and supply chain cost reduction.",
+    "about": [
+      "supply chain optimization",
+      "logistics performance",
+      "3PL onboarding and RFPs",
+      "inventory accuracy",
+      "COGS reduction",
+      "customer experience improvement"
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "OpsFlo",
+      "url": "https://opsflo.co"
+    }
+  }
+  </script>
 
   <!-- Browser UI color -->
   <meta name="theme-color" content="#041E33">
@@ -134,7 +159,7 @@
       #discovery .btn{ width:100%; min-width:0; }
     }
 
-    /* Outcomes (single-source CSS) */
+    /* Outcomes */
     #outcomes .section-sub{
       margin:6px 0 22px;
       color:#6b7c8f;
@@ -193,6 +218,7 @@
       </div>
       <nav>
         <a href="#services">Services</a>
+        <a href="#how-it-works">How it works</a>
         <a href="#outcomes">Outcomes</a>
         <a href="#cases">Case Studies</a>
         <a href="#discovery" class="cta-btn">Book a call</a>
@@ -252,6 +278,26 @@
       <div class="card">
         <h3>Contract manufacturer audits &amp; negotiations</h3>
         <p>Conduct factory audits, assess compliance and quality standards, and lead commercial negotiations to ensure value alignment and supply reliability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="section">
+    <h2>How It Works — Flexible by Design</h2>
+    <p class="sub">From operational analysis to fractional leadership and systems that scale, we plug in where you need the most leverage.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>1️⃣ Operational Analysis</h3>
+        <p>We start with a clear, data-driven assessment of your supply chain, contract manufacturing, logistics, 3PL, and customer experience. The goal: pinpoint the biggest opportunities to improve performance, reduce cost, and strengthen scalability.</p>
+      </div>
+      <div class="card">
+        <h3>2️⃣ Fractional &amp; Project Support</h3>
+        <p>Whether you need interim leadership or targeted project execution, OpsFlo plugs in seamlessly. With a hands-on approach, we work alongside your team to build scalable systems, optimize vendor performance, and align operations across every function — supply chain, CX, finance, and fulfillment.</p>
+      </div>
+      <div class="card">
+        <h3>3️⃣ Build for Growth</h3>
+        <p>We design the infrastructure, teams, and rhythms that sustain performance long-term — with or without us. Some clients extend into full-time partnerships once the foundation is in place; others maintain fractional support as they grow. Either way, the outcome is the same: operational clarity, control, and confidence.</p>
       </div>
     </div>
   </section>
@@ -344,7 +390,7 @@
     </div>
   </section>
 
-  <!-- === Discovery CTA (classic look) === -->
+  <!-- Discovery CTA -->
   <section id="discovery" class="cta">
     <div class="cta-inner">
       <h2>Start with a 15-minute discovery</h2>
@@ -398,13 +444,11 @@
     const cards = document.querySelectorAll('#outcomes .card');
     if (!cards.length) return;
 
-    // Respect reduced motion
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       cards.forEach(c => c.classList.add('is-visible'));
       return;
     }
 
-    // Stagger each card slightly
     cards.forEach((card, i) => {
       card.style.setProperty('--stagger', `${100 + i * 80}ms`);
     });
