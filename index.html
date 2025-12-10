@@ -92,6 +92,13 @@
     .hero{padding:72px 16px;background:linear-gradient(180deg,var(--navy-2) 0%, var(--navy) 60%);color:var(--white);text-align:center}
     .hero .inner{max-width:900px;margin:0 auto}
     .hero h1{margin:0 0 12px;font-size:40px;line-height:1.15}
+    .hero-tagline{
+      font-size:14px;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      color:#9fc1ea;
+      margin-bottom:10px;
+    }
     .hero p{max-width:760px;margin:0 auto 22px;font-size:17px;line-height:1.6;color:#d7e6f5}
     .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
     .row a{min-width:180px;text-align:center}
@@ -105,6 +112,32 @@
     .card{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fbfdff}
     .card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
     .card p{margin:0;font-size:15px;line-height:1.6}
+
+    /* Section Title Styling */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #041e33;
+      margin-bottom: 0.75rem;
+      position: relative;
+      text-align: left;
+    }
+
+    /* Gradient Wave Divider */
+    .wave-divider {
+      width: 80px;
+      height: 5px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #0d6efd, #12b76a);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(13, 110, 253, 0.25);
+      animation: waveGlow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes waveGlow {
+      0% { box-shadow: 0 0 10px rgba(13, 110, 253, 0.25); }
+      100% { box-shadow: 0 0 20px rgba(18, 183, 106, 0.45); }
+    }
 
     /* KPIs */
     .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
@@ -231,11 +264,19 @@
   <!-- Hero -->
   <section class="hero">
     <div class="inner">
-      <h1>Where Operations Find Flow.</h1>
-      <p>OpsFlo provides fractional operations and supply chain leadership for growth-stage CPG and DTC brands. We turn fragmented operations into a resilient, data-driven supply chain that scales profitably and sustainably.</p>
+      <h1>We turn fragmented operations into a resilient, data-driven supply chain that scales.</h1>
+
+      <div class="hero-tagline">Where operations find flow.</div>
+
+      <p>
+        OpsFlo provides full-service and fractional operations leadership for growth-stage CPG &amp; DTC brands —
+        optimizing end-to-end supply chain, fulfillment, logistics, customer experience, and manufacturing systems.
+      </p>
       <div class="row">
         <a class="cta-btn" href="#discovery">Contact us</a>
-        <a class="cta-outline" href="https://calendly.com/opsflo-consulting/15min" target="_blank" rel="noopener">Schedule on Calendly</a>
+        <a class="cta-outline" href="https://calendly.com/opsflo-consulting/15min" target="_blank" rel="noopener">
+          Schedule on Calendly
+        </a>
       </div>
       <div class="hero-note">🌴 Based in Los Angeles. Partnering with brands worldwide.</div>
     </div>
