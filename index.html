@@ -247,12 +247,45 @@
 
     /* Mobile tweaks */
     @media (max-width: 640px){
-      .brand{font-size:18px}
-      .tag{width:100%;margin-left:0;margin-top:4px;text-align:left}
-      nav{width:100%}
-      .hero h1{font-size:34px}
+      /* Header / nav mobile layout */
+      header .wrap{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+      }
+      .left{
+        width:100%;
+        align-items:center;
+        justify-content:flex-start;
+        gap:8px;
+      }
+      .brand{font-size:18px;}
+      nav{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+      }
+      nav a{
+        font-size:14px;
+        padding:6px 10px;
+      }
+      nav .cta-btn,
+      nav .cta-outline{
+        flex:1 1 100%;
+        text-align:center;
+        justify-content:center;
+      }
+      .tag{
+        width:100%;
+        margin-left:0;
+        margin-top:4px;
+        text-align:left;
+        font-size:12px;
+      }
+      .hero h1{font-size:32px}
       .hero p,
-      .hero-subtext{font-size:16px}
+      .hero-subtext{font-size:15px}
       .brands-list span{font-size:16px}
     }
   </style>
@@ -278,19 +311,19 @@
     </div>
   </header>
 
-<!-- Hero (updated) -->
-<section class="hero">
-  <div class="inner">
-    <h1>Where Operations Finds Flow.</h1>
-    <p class="hero-subtext">
-      We turn fragmented operations into a resilient, data-driven supply chain for $5M–$50M CPG and DTC brands — driving clarity, speed, and scalable growth.
-    </p>
-    <a href="https://calendly.com/opsflo-consulting/15min" class="cta-button" target="_blank" rel="noopener">
-      Book a 15-Minute Discovery Call
-    </a>
-    <div class="hero-note">🌴 Based in Los Angeles. Partnering with brands worldwide.</div>
-  </div>
-</section>
+  <!-- Hero (updated) -->
+  <section class="hero">
+    <div class="inner">
+      <h1>Where Operations Finds Flow.</h1>
+      <p class="hero-subtext">
+        We turn fragmented operations into a resilient, data-driven supply chain for $5M–$50M CPG and DTC brands — driving clarity, speed, and scalable growth.
+      </p>
+      <a href="https://calendly.com/opsflo-consulting/15min" class="cta-button" target="_blank" rel="noopener">
+        Book a 15-Minute Discovery Call
+      </a>
+      <div class="hero-note">🌴 Based in Los Angeles. Partnering with brands worldwide.</div>
+    </div>
+  </section>
 
   <!-- What We Do -->
   <section id="what-we-do" class="section" style="text-align:center; background:#fbfdff; border-top:1px solid #e6eef5; border-bottom:1px solid #e6eef5; padding:60px 16px;">
