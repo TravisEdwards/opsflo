@@ -88,50 +88,100 @@
     .cta-outline{border:1px solid #9cc4ff;color:#e6f0ff;padding:9px 13px;border-radius:10px;font-weight:700;white-space:nowrap}
     .tag{color:#a7d1ff;font-size:13px;margin-left:auto}
 
-    /* Hero */
-    .hero{padding:72px 16px;background:linear-gradient(180deg,var(--navy-2) 0%, var(--navy) 60%);color:var(--white);text-align:center}
-    .hero .inner{max-width:900px;margin:0 auto}
+    /* HERO (NEW) */
+    .hero{
+      background: linear-gradient(180deg, #071c2d 0%, #041E33 70%);
+      color: #ffffff;
+      padding: 96px 16px 88px;
+      text-align: center;
+    }
+    .hero-inner{
+      max-width: 920px;
+      margin: 0 auto;
+    }
     .hero-eyebrow{
-      font-size:15px;
-      letter-spacing:0.12em;
-      text-transform:uppercase;
-      color:#a8c9f5;
-      margin-bottom:20px;
-      font-weight:600;
-      opacity:0.9;
-      background:linear-gradient(90deg,#8ec5ff,#12b76a);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      background: linear-gradient(90deg, #12b76a, #8ec5ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .hero h1{margin:0 0 18px;font-size:40px;line-height:1.15}
-    .hero p{max-width:760px;margin:0 auto 22px;font-size:17px;line-height:1.6;color:#d7e6f5}
-    .hero-subtext{
-      max-width:760px;
-      margin:0 auto 30px;
-      font-size:17px;
-      line-height:1.6;
-      color:#d7e6f5;
+    .hero h1{
+      font-size: 48px;
+      line-height: 1.1;
+      margin: 0 0 18px;
+      letter-spacing: -0.02em;
     }
-    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
-    .row a{min-width:180px;text-align:center}
+    .hero-lead{
+      font-size: 18px;
+      line-height: 1.6;
+      color: #d7e6f5;
+      max-width: 820px;
+      margin: 0 auto 16px;
+    }
+    .hero-sub{
+      font-size: 17px;
+      line-height: 1.6;
+      color: #cfe0f1;
+      max-width: 820px;
+      margin: 0 auto 32px;
+    }
     .cta-button{
-      display:inline-block;
-      padding:14px 28px;
-      border-radius:999px;
-      background:linear-gradient(90deg,#12b76a,#8ec5ff);
-      color:#041E33;
-      font-weight:700;
-      font-size:16px;
-      text-decoration:none;
-      box-shadow:0 10px 24px rgba(0,0,0,.25);
-      transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+      display: inline-block;
+      padding: 16px 34px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #12b76a, #8ec5ff);
+      color: #041E33;
+      font-weight: 800;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 14px 32px rgba(0,0,0,.35);
+      transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
     }
     .cta-button:hover{
-      transform:translateY(-1px);
-      box-shadow:0 14px 30px rgba(0,0,0,.3);
-      opacity:.96;
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.4);
+      opacity: .98;
     }
-    .hero-note{color:#9fc1ea;margin-top:12px;font-size:14px}
+    .hero-note{
+      margin-top: 16px;
+      font-size: 14px;
+      color: #9fc1ea;
+    }
+
+    /* WHAT WE DO (NEW - CLEAN) */
+    .what-we-do{
+      background: #fbfdff;
+      padding: 72px 16px;
+      border-top: 1px solid #e6eef5;
+      border-bottom: 1px solid #e6eef5;
+    }
+    .what-inner{
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .what-we-do h2{
+      font-size: 34px;
+      font-weight: 800;
+      color: #041E33;
+      margin: 0 0 16px;
+    }
+    .what-lead{
+      font-size: 18px;
+      line-height: 1.6;
+      color: #1f3b57;
+      margin: 0 0 14px;
+    }
+    .what-sub{
+      font-size: 16px;
+      line-height: 1.6;
+      color: #4f5b66;
+      margin: 0;
+    }
 
     /* Sections */
     section.section{padding:48px 16px;max-width:1160px;margin:0 auto}
@@ -282,13 +332,15 @@
         text-align:left;
         font-size:12px;
       }
-      .hero h1{font-size:32px}
-      .hero p,
-      .hero-subtext{font-size:15px}
       .brands-list span{font-size:16px}
+
+      /* Hero mobile */
+      .hero h1{font-size:34px}
+      .hero-lead,.hero-sub{font-size:15px}
     }
   </style>
 </head>
+
 <body>
   <!-- Header -->
   <header>
@@ -306,42 +358,44 @@
         <a href="#discovery" class="cta-btn">Book a call</a>
         <a class="cta-outline" href="https://calendly.com/opsflo-consulting/15min" target="_blank" rel="noopener">Calendly</a>
       </nav>
-      <!-- removed floating Operational & Supply Chain Strategy text -->
     </div>
   </header>
 
-  <!-- Hero (updated) -->
+  <!-- HERO (NEW) -->
   <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">INDEPENDENT OPERATING LEADERSHIP</div>
-    
+    <div class="hero-inner">
+      <div class="hero-eyebrow">INDEPENDENT OPERATING LEADERSHIP</div>
+
       <h1>Operations shouldn’t depend on you.</h1>
-      <p class="hero-subtext">
-        OpsFlo steps in as independent operating leadership for CPG brands — driving clarity, speed, and scalable growth.
+
+      <p class="hero-lead">
+        OpsFlo steps in as independent operating leadership across supply chain and operations — so the business actually runs.
       </p>
+
+      <p class="hero-sub">
+        I embed as a Head of Ops / COO for growing CPG &amp; DTC brands when growth outpaces systems, vendors, and internal ownership.
+      </p>
+
       <a href="https://calendly.com/opsflo-consulting/15min" class="cta-button" target="_blank" rel="noopener">
         👉 Talk to an operator
       </a>
+
       <div class="hero-note">🌴 Based in Los Angeles. Partnering with brands worldwide.</div>
     </div>
   </section>
 
-  <!-- What We Do -->
- <section class="what-we-do">
-  <div class="what-inner">
-    <h2>What We Do</h2>
-
-    <p class="what-lead">
-      Engage OpsFlo as embedded operating leadership — stepping in full-scope or fractionally
-      to own execution across supply chain and operations.
-    </p>
-
-    <p class="what-sub">
-      This can include hands-on execution, focused initiatives, or interim leadership during
-      periods of growth, transition, or operational strain.
-    </p>
-  </div>
-</section>
+  <!-- WHAT WE DO (NEW) -->
+  <section id="what-we-do" class="what-we-do" aria-label="What We Do">
+    <div class="what-inner">
+      <h2>What We Do</h2>
+      <p class="what-lead">
+        Engage OpsFlo as embedded operating leadership — stepping in full-scope or fractionally to own execution across supply chain and operations.
+      </p>
+      <p class="what-sub">
+        This can include hands-on execution, focused initiatives, or interim leadership during periods of growth, transition, or operational strain.
+      </p>
+    </div>
+  </section>
 
   <!-- Services -->
   <section id="services" class="section">
