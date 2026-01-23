@@ -220,6 +220,57 @@
     .what-lead{font-size:18px;line-height:1.6;color:#1f3b57;margin:0 0 14px}
     .what-sub{font-size:16px;line-height:1.6;color:#4f5b66;margin:0}
 
+    /* NEW: Margin Unlock card (matches your system, low-promises, premium) */
+    .margin-unlock{max-width:820px;margin:24px auto 0;text-align:left}
+    .margin-card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+    }
+    .margin-eyebrow{
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:#274690;
+      margin-bottom:8px;
+    }
+    .margin-title{
+      margin:0 0 8px;
+      color:var(--navy);
+      font-size:18px;
+      font-weight:900;
+    }
+    .margin-text{
+      margin:0 0 12px;
+      color:#334155;
+      line-height:1.6;
+      font-size:15px;
+    }
+    .margin-list{margin:0 0 12px;padding-left:18px;color:#334155;line-height:1.55;font-size:14px}
+    .margin-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .margin-cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:900;
+      background:#fff;
+      color:#123a63;
+      border:1px solid rgba(4,30,51,.18);
+      transition:transform .15s ease, filter .15s ease;
+      white-space:nowrap;
+    }
+    .margin-cta:hover{transform:translateY(-1px);filter:brightness(1.02)}
+    .margin-note{
+      margin:10px 0 0;
+      font-size:12px;
+      color:#6b7c8f;
+      line-height:1.5;
+    }
+
     /* DIFFERENTIATION */
     .diff{max-width:1160px;margin:0 auto;padding:56px 16px}
     .diff .head{max-width:820px;margin:0 auto 18px;text-align:center}
@@ -389,6 +440,30 @@
       <h2>What We Do</h2>
       <p class="what-lead">Engage OpsFlo as embedded operating leadership — stepping in full-scope or fractionally to own execution across supply chain and operations.</p>
       <p class="what-sub">This can include hands-on execution, focused initiatives, or interim leadership during periods of growth, transition, or operational strain.</p>
+
+      <!-- NEW: Margin Unlock (Freight Cost Reset) — nested here to avoid service sprawl -->
+      <div class="margin-unlock" aria-label="Margin Unlock Freight Cost Reset">
+        <div class="margin-card">
+          <div class="margin-eyebrow">MARGIN UNLOCK</div>
+          <h3 class="margin-title">Freight Cost Reset</h3>
+          <p class="margin-text">
+            Once OpsFlo owns your shipping flow, we can unlock enterprise-level carrier pricing that small and mid-size brands can’t access on their own.
+            This is deployed <strong>only after a paid diagnostic</strong> to protect service and ensure savings stick.
+          </p>
+          <ul class="margin-list">
+            <li>Enterprise pricing access (via a $1B+ freight network)</li>
+            <li>No minimums or volume commitments</li>
+            <li>No hidden accessorial surprises</li>
+          </ul>
+          <div class="margin-actions">
+            <a class="margin-cta" href="https://calendly.com/opsflo-consulting/opsflo-ops-diagnostic" target="_blank" rel="noopener">🚚 Start with a Freight Diagnostic</a>
+          </div>
+          <p class="margin-note">
+            Note: Rates are never shared as a standalone deliverable. Deployment follows diagnostic approval to protect service and ensure savings hold.
+          </p>
+        </div>
+      </div>
+      <!-- /NEW -->
     </div>
   </section>
 
