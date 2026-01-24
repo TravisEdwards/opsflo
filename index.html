@@ -197,7 +197,7 @@
       margin:0 auto 20px;
     }
 
-    /* NEW: Signature divider (for the bottom line) */
+    /* Signature divider (for the bottom line) */
     .signature-line{
       margin:22px auto 0;
       padding-top:16px;
@@ -230,7 +230,7 @@
     .hero-cta-micro{margin-top:10px;font-size:14px;color:#9fc1ea}
     .hero-note{margin-top:16px;font-size:14px;color:#9fc1ea}
 
-    /* NEW: HOW IT WORKS */
+    /* HOW IT WORKS */
     .how{
       background:linear-gradient(180deg, #071c2d 0%, #0b2236 100%);
       color:#e6f0ff;
@@ -296,20 +296,29 @@
       border-top:1px solid var(--line);
       border-bottom:1px solid var(--line);
     }
-    .what-inner{max-width:820px;margin:0 auto;text-align:center}
+    .what-inner{max-width:980px;margin:0 auto;text-align:center}
     .what-we-do h2{font-size:34px;font-weight:900;color:var(--navy);margin:0 0 16px}
-    .what-lead{font-size:18px;line-height:1.6;color:#1f3b57;margin:0 0 14px}
+    .what-lead{font-size:18px;line-height:1.6;color:#1f3b57;margin:0 0 10px}
     .what-sub{font-size:16px;line-height:1.6;color:#4f5b66;margin:0}
 
-    /* Margin Unlock card */
-    .margin-unlock{max-width:820px;margin:24px auto 0;text-align:left}
-    .margin-card{
+    /* Generic cards/grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{
       border:1px solid var(--line);
       border-radius:14px;
       padding:16px;
-      background:#fff;
+      background:#ffffff;
     }
-    .margin-eyebrow{
+    .card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
+    .card p{margin:0;font-size:15px;line-height:1.6;color:#334155}
+
+    /* Featured card for Parcel Cost Reset (fits inside the same grid) */
+    .card--featured{
+      border:1px solid rgba(18,183,106,.35);
+      background:linear-gradient(180deg, rgba(18,183,106,.06), rgba(142,197,255,.06));
+      box-shadow:0 10px 28px rgba(0,0,0,.06);
+    }
+    .card-eyebrow{
       font-size:12px;
       font-weight:900;
       letter-spacing:.14em;
@@ -317,21 +326,14 @@
       color:#274690;
       margin-bottom:8px;
     }
-    .margin-title{
-      margin:0 0 8px;
-      color:var(--navy);
-      font-size:18px;
-      font-weight:900;
-    }
-    .margin-text{
-      margin:0 0 12px;
+    .card-list{
+      margin:10px 0 12px;
+      padding-left:18px;
       color:#334155;
-      line-height:1.6;
-      font-size:15px;
+      line-height:1.55;
+      font-size:14px;
     }
-    .margin-list{margin:0 0 12px;padding-left:18px;color:#334155;line-height:1.55;font-size:14px}
-    .margin-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-    .margin-cta{
+    .card-cta{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -344,8 +346,8 @@
       transition:transform .15s ease, filter .15s ease;
       white-space:nowrap;
     }
-    .margin-cta:hover{transform:translateY(-1px);filter:brightness(1.02)}
-    .margin-note{
+    .card-cta:hover{transform:translateY(-1px);filter:brightness(1.02)}
+    .card-note{
       margin:10px 0 0;
       font-size:12px;
       color:#6b7c8f;
@@ -371,10 +373,6 @@
     .section-title{font-size:32px;font-weight:900;color:var(--navy);margin:0 0 4px}
     .wave-divider{width:80px;height:4px;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--green));margin-bottom:16px}
     .sub{margin:0 0 16px;color:#3f4b56}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fbfdff}
-    .card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
-    .card p{margin:0;font-size:15px;line-height:1.6}
 
     /* Outcomes */
     #outcomes .section-sub{margin:6px 0 10px;color:#6b7c8f;font-size:1rem;line-height:1.5}
@@ -445,7 +443,7 @@
     .social svg{height:18px;width:18px;fill:#e6f0ff}
     .social a:hover{background:#0a2236}
 
-    /* NEW: Mobile sticky CTA (mobile only, appears after scroll) */
+    /* Mobile sticky CTA */
     .sticky-cta{
       position:fixed;
       left:0; right:0; bottom:0;
@@ -479,7 +477,7 @@
       color:rgba(230,240,255,.7);
     }
 
-    /* Mobile */
+    /* Responsive */
     @media (max-width: 860px){
       .diff-grid{grid-template-columns:1fr}
       .diff-label{min-width:120px}
@@ -497,20 +495,12 @@
       .nav-cta,.nav-email{flex:1 1 100%;text-align:center;justify-content:center}
       .hero h1{font-size:34px}
       .hero-subhead{font-size:15px}
-
-      /* Make signature slightly smaller on mobile */
       .signature-line{font-size:14px;padding-top:14px;margin-top:18px}
-
       #discovery h2{font-size:34px}
       #discovery .cta-sub{font-size:18px}
       #discovery .btn-operator,.btn-outline{width:100%;min-width:0}
-
-      /* Hide hero CTA button on mobile (sticky CTA will handle intent) */
       .hero .cta-button{display:none}
-
-      /* Show sticky CTA container on mobile only */
       .sticky-cta{display:block}
-      /* Give some breathing room at bottom so content isn't hidden behind sticky */
       body{padding-bottom:84px}
     }
   </style>
@@ -531,7 +521,6 @@
       <nav>
         <a href="#how-it-works">How it works</a>
         <a href="#what-we-do">What we do</a>
-        <a href="#services">Scope</a>
         <a href="#outcomes">Outcomes</a>
         <a href="#cases">Case Studies</a>
         <a href="#discovery" class="nav-cta">👉 Talk to an operator</a>
@@ -546,18 +535,15 @@
 
       <h1>Operations shouldn’t depend on you.</h1>
 
-      <!-- UPDATED: Single-line hero value prop -->
       <p class="hero-subhead">
         Head of Operations / COO leadership for scaling CPG &amp; DTC brands.
         OpsFlo steps in, owns execution across supply chain + operations, and builds the system so the business runs without founder escalation.
       </p>
 
-      <!-- NEW: Signature divider line -->
       <p class="signature-line">
         Consultants recommend. Vendors optimize. <strong>OpsFlo owns.</strong>
       </p>
 
-      <!-- UPDATED: soft hero CTA (goes to operating model section, not Calendly) -->
       <a href="#how-it-works" class="cta-button" style="margin-top:24px;">See the operating model</a>
       <div class="hero-cta-micro">How OpsFlo steps in, owns execution, and exits cleanly.</div>
 
@@ -614,30 +600,68 @@
     </div>
   </section>
 
+  <!-- What We Do (now includes the former Scope cards + Parcel Cost Reset in one place) -->
   <section id="what-we-do" class="what-we-do" aria-label="What We Do">
     <div class="what-inner">
       <h2>What We Do</h2>
-      <p class="what-lead">Once OpsFlo is embedded, we own execution across the following areas — stepping in full-scope or fractionally across supply chain and operations.</p>
-      <p class="what-sub">This can include hands-on execution, focused initiatives, or interim leadership during periods of growth, transition, or operational strain.</p>
+      <p class="what-lead">You’re not buying “projects.” You’re getting an operator accountable for outcomes across the stack.</p>
+      <p class="what-sub">OpsFlo can embed end-to-end or lead focused initiatives during growth, transition, or operational strain.</p>
 
-      <!-- Parcel Cost Reset stays (unchanged) -->
-      <div class="margin-unlock" aria-label="Margin Unlock Parcel Cost Reset">
-        <div class="margin-card">
-          <div class="margin-eyebrow">MARGIN UNLOCK</div>
-          <h3 class="margin-title">Parcel Cost Reset</h3>
-          <p class="margin-text">
-            Once OpsFlo owns your shipping flow, we can unlock enterprise-level parcel pricing that small and mid-size brands can’t access on their own.
-            This is deployed <strong>only after a paid diagnostic</strong> to protect service and ensure savings stick.
+      <div class="grid" style="margin-top:26px;text-align:left;">
+        <div class="card">
+          <h3>🚚 Fulfillment networks &amp; logistics</h3>
+          <p>Multi-node design, inventory placement, carrier strategy, and routing to cut time-in-transit and cost.</p>
+        </div>
+
+        <div class="card">
+          <h3>🏢 3PL search, RFP &amp; onboarding</h3>
+          <p>RFP, SLAs/KPIs, commercial terms, transition plan, and go-live—without disrupting day-to-day.</p>
+        </div>
+
+        <div class="card">
+          <h3>🧰 Systems (ERP/WMS) + visibility</h3>
+          <p>Real-time inventory and order status, faster close, reporting, and the tooling needed to run clean.</p>
+        </div>
+
+        <div class="card">
+          <h3>📦 Inventory planning &amp; accuracy</h3>
+          <p>Forecast inputs, reorder logic, cycle counts, reconciliation, and control to prevent stockouts and surprises.</p>
+        </div>
+
+        <div class="card">
+          <h3>💰 COGS &amp; margin improvement</h3>
+          <p>Landed-cost modeling, packaging/cube, vendor terms, and freight mix to unlock contribution margin.</p>
+        </div>
+
+        <div class="card">
+          <h3>💬 Customer experience (CX) + delivery performance</h3>
+          <p>Reduce WISMO, tighten promise dates, clean handoffs, and build a CX machine tied to ops execution.</p>
+        </div>
+
+        <div class="card">
+          <h3>📊 Vendor performance &amp; accountability</h3>
+          <p>Scorecards, QBR cadence, escalation paths, and enforcement so vendors stop “owning” your outcomes.</p>
+        </div>
+
+        <div class="card">
+          <h3>🏭 Contract manufacturing</h3>
+          <p>Capacity, quality, audits, negotiations, and change control to protect supply and retailer compliance.</p>
+        </div>
+
+        <div class="card card--featured">
+          <div class="card-eyebrow">MARGIN UNLOCK</div>
+          <h3>⚡ Parcel Cost Reset</h3>
+          <p>
+            Unlock enterprise-level parcel pricing that small and mid-size brands can’t access on their own.
+            Deployed after a paid diagnostic to protect service and ensure savings stick.
           </p>
-          <ul class="margin-list">
-            <li>Enterprise-level parcel pricing, normally unavailable to small and mid-size brands</li>
+          <ul class="card-list">
+            <li>Enterprise-level parcel pricing</li>
             <li>No minimums or volume commitments</li>
             <li>No hidden accessorial surprises</li>
           </ul>
-          <div class="margin-actions">
-            <a class="margin-cta" href="https://calendly.com/opsflo-consulting/parcel-cost-reset-diagnostic" target="_blank" rel="noopener">🚚 Start with a Parcel Diagnostic</a>
-          </div>
-          <p class="margin-note">
+          <a class="card-cta" href="https://calendly.com/opsflo-consulting/parcel-cost-reset-diagnostic" target="_blank" rel="noopener">🚚 Start with a Parcel Diagnostic</a>
+          <p class="card-note">
             Note: Rates are never shared as a standalone deliverable. Deployment follows diagnostic approval to protect service and ensure savings hold.
           </p>
         </div>
@@ -674,54 +698,6 @@
     </div>
 
     <div class="diff-footer">Consultants recommend. Vendors optimize. <strong>OpsFlo owns.</strong></div>
-  </section>
-
-  <section id="services" class="section">
-    <h2 class="section-title">Scope</h2>
-    <div class="wave-divider"></div>
-    <p class="sub">You’re not buying “projects.” You’re getting an operator accountable for outcomes across the stack.</p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Fulfillment networks &amp; logistics</h3>
-        <p>Multi-node design, inventory placement, carrier strategy, and routing to cut time-in-transit and cost.</p>
-      </div>
-
-      <div class="card">
-        <h3>3PL search, RFP &amp; onboarding</h3>
-        <p>RFP, SLAs/KPIs, commercial terms, transition plan, and go-live—without disrupting day-to-day.</p>
-      </div>
-
-      <div class="card">
-        <h3>Systems (ERP/WMS) + visibility</h3>
-        <p>Real-time inventory and order status, faster close, reporting, and the tooling needed to run clean.</p>
-      </div>
-
-      <div class="card">
-        <h3>Inventory planning &amp; accuracy</h3>
-        <p>Forecast inputs, reorder logic, cycle counts, reconciliation, and control to prevent stockouts and surprises.</p>
-      </div>
-
-      <div class="card">
-        <h3>COGS &amp; margin improvement</h3>
-        <p>Landed-cost modeling, packaging/cube, vendor terms, and freight mix to unlock contribution margin.</p>
-      </div>
-
-      <div class="card">
-        <h3>Customer experience (CX) + delivery performance</h3>
-        <p>Reduce WISMO, tighten promise dates, clean handoffs, and build a CX machine tied to ops execution.</p>
-      </div>
-
-      <div class="card">
-        <h3>Vendor performance &amp; accountability</h3>
-        <p>Scorecards, QBR cadence, escalation paths, and enforcement so vendors stop “owning” your outcomes.</p>
-      </div>
-
-      <div class="card">
-        <h3>Contract manufacturing</h3>
-        <p>Capacity, quality, audits, negotiations, and change control to protect supply and retailer compliance.</p>
-      </div>
-    </div>
   </section>
 
   <section id="outcomes" class="section">
@@ -856,7 +832,7 @@
 
   <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Outcomes animation (unchanged)
+    // Outcomes animation
     const cards = document.querySelectorAll('#outcomes .card');
     if (cards.length) {
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
