@@ -444,6 +444,37 @@
     .diff-opsflo .diff-label{color:#0f2e25}
     .diff-footer{text-align:center;margin-top:18px;color:#4f5b66;font-size:14px}
 
+    /* ===== NEW: "Why OpsFlo" CTA inside the diff section header ===== */
+    .diff-cta{
+      margin-top:14px;
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .diff-cta a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:900;
+      white-space:nowrap;
+      transition:transform .15s ease, filter .15s ease, opacity .15s ease;
+    }
+    .diff-cta .btn-primary{
+      background:linear-gradient(90deg,var(--green),#8ec5ff);
+      color:#041E33;
+      box-shadow:0 14px 28px rgba(0,0,0,.16);
+    }
+    .diff-cta .btn-primary:hover{transform:translateY(-1px);filter:brightness(1.03)}
+    .diff-cta .btn-secondary{
+      background:#fff;
+      border:1px solid rgba(4,30,51,.18);
+      color:#123a63;
+    }
+    .diff-cta .btn-secondary:hover{transform:translateY(-1px);filter:brightness(1.02)}
+
     /* Generic sections */
     section.section{padding:48px 16px;max-width:1160px;margin:0 auto}
     .section-title{font-size:32px;font-weight:900;color:var(--navy);margin:0 0 4px}
@@ -601,6 +632,8 @@
       <nav>
         <a href="#how-it-works">How it works</a>
         <a href="#what-we-do">What we do</a>
+        <!-- NEW: Why OpsFlo link in top nav -->
+        <a href="#why-opsflo">Why OpsFlo</a>
         <a href="#outcomes">Outcomes</a>
         <a href="#cases">Case Studies</a>
         <a href="#discovery" class="nav-cta">👉 Talk to an operator</a>
@@ -759,10 +792,17 @@
     </div>
   </section>
 
-  <section class="diff" aria-label="OpsFlo vs everyone else">
+  <!-- NEW: ID added so the nav link works -->
+  <section id="why-opsflo" class="diff" aria-label="OpsFlo vs everyone else">
     <div class="head">
       <h2>OpsFlo vs “ops help”</h2>
       <p>Most options improve pieces. OpsFlo owns the system end-to-end until it’s stable.</p>
+
+      <!-- NEW: CTA row under the header -->
+      <div class="diff-cta" aria-label="Why OpsFlo CTA">
+        <a class="btn-primary" href="#discovery">👉 Talk to an operator</a>
+        <a class="btn-secondary" href="#what-we-do">📌 What we do</a>
+      </div>
     </div>
 
     <div class="diff-grid">
