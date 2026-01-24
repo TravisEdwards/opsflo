@@ -312,47 +312,123 @@
     .card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
     .card p{margin:0;font-size:15px;line-height:1.6;color:#334155}
 
-    /* Featured card for Parcel Cost Reset (fits inside the same grid) */
-    .card--featured{
-      border:1px solid rgba(18,183,106,.35);
-      background:linear-gradient(180deg, rgba(18,183,106,.06), rgba(142,197,255,.06));
-      box-shadow:0 10px 28px rgba(0,0,0,.06);
+    /* ===== NEW: Featured Offer (navy gradient block) ===== */
+    .featured-offer{
+      margin:26px auto 0;
+      max-width:980px;
+      text-align:left;
+      border-radius:18px;
+      padding:22px;
+      background:linear-gradient(180deg,var(--navy-2) 0%, var(--navy) 100%);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 18px 44px rgba(0,0,0,.22);
+      position:relative;
+      overflow:hidden;
     }
-    .card-eyebrow{
+    .featured-offer::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:radial-gradient(600px 220px at 20% 0%, rgba(142,197,255,.22), transparent 60%),
+                 radial-gradient(520px 220px at 90% 20%, rgba(18,183,106,.18), transparent 60%);
+      pointer-events:none;
+    }
+    .featured-offer > *{position:relative;z-index:1}
+
+    .featured-eyebrow{
       font-size:12px;
       font-weight:900;
-      letter-spacing:.14em;
+      letter-spacing:.18em;
       text-transform:uppercase;
-      color:#274690;
-      margin-bottom:8px;
+      color:rgba(230,240,255,.78);
+      margin:0 0 10px;
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
-    .card-list{
-      margin:10px 0 12px;
+    .featured-eyebrow .dot{
+      height:10px;width:10px;border-radius:999px;
+      background:linear-gradient(90deg,var(--green),#8ec5ff);
+      box-shadow:0 0 0 6px rgba(142,197,255,.10);
+      flex:0 0 auto;
+    }
+
+    .featured-title{
+      margin:0 0 10px;
+      font-size:26px;
+      font-weight:900;
+      color:#ffffff;
+      letter-spacing:-.02em;
+    }
+    .featured-title .bolt{
+      display:inline-block;
+      margin-right:10px;
+      filter:drop-shadow(0 8px 18px rgba(0,0,0,.35));
+    }
+    .featured-sub{
+      margin:0 0 14px;
+      color:rgba(230,240,255,.86);
+      line-height:1.6;
+      font-size:16px;
+      max-width:920px;
+    }
+
+    .featured-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      align-items:start;
+      margin-top:10px;
+    }
+
+    .featured-bullets{
+      margin:0;
       padding-left:18px;
-      color:#334155;
-      line-height:1.55;
+      color:rgba(230,240,255,.86);
+      line-height:1.6;
       font-size:14px;
     }
-    .card-cta{
+    .featured-bullets li{margin:6px 0}
+
+    .featured-actions{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      align-items:stretch;
+      justify-content:flex-start;
+    }
+    .featured-actions a{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:12px 18px;
+      padding:12px 16px;
       border-radius:999px;
       font-weight:900;
-      background:#fff;
-      color:#123a63;
-      border:1px solid rgba(4,30,51,.18);
-      transition:transform .15s ease, filter .15s ease;
       white-space:nowrap;
+      transition:transform .15s ease, filter .15s ease, opacity .15s ease;
     }
-    .card-cta:hover{transform:translateY(-1px);filter:brightness(1.02)}
-    .card-note{
+    .featured-actions .btn-primary{
+      background:linear-gradient(90deg,var(--green),#8ec5ff);
+      color:#041E33;
+      box-shadow:0 14px 28px rgba(0,0,0,.35);
+    }
+    .featured-actions .btn-primary:hover{transform:translateY(-1px);filter:brightness(1.03)}
+    .featured-actions .btn-secondary{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      color:#e6f0ff;
+    }
+    .featured-actions .btn-secondary:hover{transform:translateY(-1px);filter:brightness(1.02)}
+
+    .featured-note{
       margin:10px 0 0;
       font-size:12px;
-      color:#6b7c8f;
       line-height:1.5;
+      color:rgba(230,240,255,.70);
     }
+
+    /* tighten the grid spacing below the featured offer */
+    .what-grid{margin-top:18px;text-align:left}
 
     /* DIFFERENTIATION */
     .diff{max-width:1160px;margin:0 auto;padding:56px 16px}
@@ -482,6 +558,7 @@
       .diff-grid{grid-template-columns:1fr}
       .diff-label{min-width:120px}
       .how-grid{grid-template-columns:1fr}
+      .featured-grid{grid-template-columns:1fr}
     }
     @media (max-width: 720px){
       .brand__descriptor{display:none}
@@ -502,6 +579,9 @@
       .hero .cta-button{display:none}
       .sticky-cta{display:block}
       body{padding-bottom:84px}
+
+      .featured-offer{padding:18px}
+      .featured-title{font-size:22px}
     }
   </style>
 </head>
@@ -600,14 +680,42 @@
     </div>
   </section>
 
-  <!-- What We Do (now includes the former Scope cards + Parcel Cost Reset in one place) -->
+  <!-- What We Do (now includes the former Scope cards, with a NAVY featured offer block) -->
   <section id="what-we-do" class="what-we-do" aria-label="What We Do">
     <div class="what-inner">
       <h2>What We Do</h2>
       <p class="what-lead">You’re not buying “projects.” You’re getting an operator accountable for outcomes across the stack.</p>
       <p class="what-sub">OpsFlo can embed end-to-end or lead focused initiatives during growth, transition, or operational strain.</p>
 
-      <div class="grid" style="margin-top:26px;text-align:left;">
+      <!-- NEW: Featured Offer block (Navy gradient, standalone, premium) -->
+      <div class="featured-offer" aria-label="Featured Offer Parcel Cost Reset">
+        <div class="featured-eyebrow"><span class="dot"></span>FEATURED OFFER</div>
+        <h3 class="featured-title"><span class="bolt">⚡</span>Parcel Cost Reset</h3>
+        <p class="featured-sub">
+          Unlock enterprise-level parcel pricing that small and mid-size brands can’t access on their own —
+          deployed <strong>after a paid diagnostic</strong> to protect service and ensure savings stick.
+        </p>
+
+        <div class="featured-grid">
+          <ul class="featured-bullets">
+            <li>Enterprise-level parcel pricing</li>
+            <li>No minimums or volume commitments</li>
+            <li>No hidden accessorial surprises</li>
+            <li>Routing + service safeguards (so savings don’t create CX risk)</li>
+          </ul>
+
+          <div class="featured-actions">
+            <a class="btn-primary" href="https://calendly.com/opsflo-consulting/parcel-cost-reset-diagnostic" target="_blank" rel="noopener">🚚 Start with a Parcel Diagnostic</a>
+            <a class="btn-secondary" href="#discovery">👉 Talk to an operator</a>
+            <div class="featured-note">
+              Note: Rates are never shared as a standalone deliverable. Deployment follows diagnostic approval to protect service and ensure savings hold.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Capability grid -->
+      <div class="grid what-grid">
         <div class="card">
           <h3>🚚 Fulfillment networks &amp; logistics</h3>
           <p>Multi-node design, inventory placement, carrier strategy, and routing to cut time-in-transit and cost.</p>
@@ -646,24 +754,6 @@
         <div class="card">
           <h3>🏭 Contract manufacturing</h3>
           <p>Capacity, quality, audits, negotiations, and change control to protect supply and retailer compliance.</p>
-        </div>
-
-        <div class="card card--featured">
-          <div class="card-eyebrow">MARGIN UNLOCK</div>
-          <h3>⚡ Parcel Cost Reset</h3>
-          <p>
-            Unlock enterprise-level parcel pricing that small and mid-size brands can’t access on their own.
-            Deployed after a paid diagnostic to protect service and ensure savings stick.
-          </p>
-          <ul class="card-list">
-            <li>Enterprise-level parcel pricing</li>
-            <li>No minimums or volume commitments</li>
-            <li>No hidden accessorial surprises</li>
-          </ul>
-          <a class="card-cta" href="https://calendly.com/opsflo-consulting/parcel-cost-reset-diagnostic" target="_blank" rel="noopener">🚚 Start with a Parcel Diagnostic</a>
-          <p class="card-note">
-            Note: Rates are never shared as a standalone deliverable. Deployment follows diagnostic approval to protect service and ensure savings hold.
-          </p>
         </div>
       </div>
     </div>
