@@ -122,7 +122,19 @@
 
     /* Header */
     header{background:var(--navy);color:var(--white)}
-    .wrap{max-width:1160px;margin:0 auto;padding:18px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    /* ✅ FIX: keep header on one line on desktop */
+    .wrap{
+      max-width:1160px;
+      margin:0 auto;
+      padding:18px 16px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:nowrap; /* was wrap */
+    }
+
+    .left{display:flex;align-items:center;gap:10px}
+    .logo{height:40px;width:auto;border-radius:6px;object-fit:contain}
 
     /* Brand block */
     .brand{
@@ -131,7 +143,8 @@
       align-items:flex-start;
       gap:2px;
       line-height:1;
-      margin-right:auto;
+      /* ✅ FIX: remove margin-right:auto that was forcing nav to next line */
+      /* margin-right:auto; */
       color:inherit;
       text-decoration:none;
       transform:translateY(1px);
@@ -151,10 +164,14 @@
       color:inherit;
     }
 
-    .left{display:flex;align-items:center;gap:10px}
-    .logo{height:40px;width:auto;border-radius:6px;object-fit:contain}
-
-    nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    /* ✅ FIX: push nav to the right + keep nav on one line (desktop) */
+    nav{
+      margin-left:auto;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:nowrap; /* was wrap */
+    }
     nav a{font-weight:650;opacity:.95;color:#e6f0ff;padding:8px 10px;border-radius:10px}
 
     .nav-cta{
@@ -598,7 +615,8 @@
       header .wrap{flex-direction:column;align-items:flex-start;gap:10px}
       .left{width:100%;align-items:center;justify-content:flex-start;gap:8px}
       .brand__name{font-size:18px}
-      nav{width:100%;display:flex;flex-wrap:wrap;gap:8px}
+      /* mobile can wrap */
+      nav{width:100%;display:flex;flex-wrap:wrap;gap:8px;margin-left:0}
       nav a{font-size:14px;padding:6px 10px}
       .nav-cta,.nav-email{flex:1 1 100%;text-align:center;justify-content:center}
       .hero h1{font-size:34px}
