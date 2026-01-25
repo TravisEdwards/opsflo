@@ -183,7 +183,7 @@
       color:#e6f0ff;
       padding:8px 10px;
       border-radius:10px;
-      white-space:nowrap;      /* stops "How it" / "works" split */
+      white-space:nowrap;
       font-size:15px;
       letter-spacing:.01em;
     }
@@ -343,7 +343,7 @@
     .card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
     .card p{margin:0;font-size:15px;line-height:1.6;color:#334155}
 
-    /* ===== NEW: Featured Offer (navy gradient block) ===== */
+    /* ===== Featured Offer (navy gradient block) ===== */
     .featured-offer{
       margin:26px auto 0;
       max-width:980px;
@@ -475,7 +475,7 @@
     .diff-opsflo .diff-label{color:#0f2e25}
     .diff-footer{text-align:center;margin-top:18px;color:#4f5b56;font-size:14px}
 
-    /* ===== NEW: "Why OpsFlo" CTA inside the diff section header ===== */
+    /* CTA row under diff header */
     .diff-cta{
       margin-top:14px;
       display:flex;
@@ -667,8 +667,10 @@
         <a href="#why-opsflo">Why OpsFlo</a>
         <a href="#outcomes">Outcomes</a>
         <a href="#cases">Case Studies</a>
+        <!-- KEEP "Talk to an operator" here (primary) -->
         <a href="#discovery" class="nav-cta">👉 Talk to an operator</a>
-        <a class="nav-email" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Talk%20to%20an%20operator">Email</a>
+        <!-- remove "Talk to an operator" from email subject -->
+        <a class="nav-email" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Operations%20Diagnostic">Email</a>
       </nav>
     </div>
   </header>
@@ -688,7 +690,7 @@
         Consultants recommend. Vendors optimize. <strong>OpsFlo owns.</strong>
       </p>
 
-      <!-- ✅ UPDATED: Hero CTA is now "learn" (not book) -->
+      <!-- HERO CTA (learn) -->
       <a href="#how-it-works" class="cta-button" style="margin-top:24px;">See how it works →</a>
       <div class="hero-cta-micro">Understand the model before you book a call.</div>
 
@@ -738,21 +740,22 @@
         </div>
       </div>
 
+      <!-- CHANGE: learn/proof CTA (no "Talk to an operator" here) -->
       <div class="how-cta">
-        <a href="#discovery" class="cta-button">👉 Talk to an operator</a>
-        <div class="how-cta-micro">When you’re ready, this is the next step.</div>
+        <a href="#outcomes" class="cta-button">What happens in the first 30 days →</a>
+        <div class="how-cta-micro">See the diagnostic outputs + typical outcomes.</div>
       </div>
     </div>
   </section>
 
-  <!-- What We Do (now includes the former Scope cards, with a NAVY featured offer block) -->
+  <!-- What We Do -->
   <section id="what-we-do" class="what-we-do" aria-label="What We Do">
     <div class="what-inner">
       <h2>What We Do</h2>
       <p class="what-lead">You’re not buying “projects.” You’re getting an operator accountable for outcomes across the stack.</p>
       <p class="what-sub">OpsFlo can embed end-to-end or lead focused initiatives during growth, transition, or operational strain.</p>
 
-      <!-- NEW: Featured Offer block (Navy gradient, standalone, premium) -->
+      <!-- Featured Offer -->
       <div class="featured-offer" aria-label="Featured Offer Parcel Cost Reset">
         <div class="featured-eyebrow"><span class="dot"></span>FEATURED OFFER</div>
         <h3 class="featured-title"><span class="bolt">⚡</span>Parcel Cost Reset</h3>
@@ -771,7 +774,8 @@
 
           <div class="featured-actions">
             <a class="btn-primary" href="https://calendly.com/opsflo-consulting/parcel-cost-reset-diagnostic" target="_blank" rel="noopener">🚚 Start with a Parcel Diagnostic</a>
-            <a class="btn-secondary" href="#discovery">👉 Talk to an operator</a>
+            <!-- CHANGE: secondary button is learn/proof CTA -->
+            <a class="btn-secondary" href="#cases">How savings are protected →</a>
             <div class="featured-note">
               Note: Rates are never shared as a standalone deliverable. Deployment follows diagnostic approval to protect service and ensure savings hold.
             </div>
@@ -824,15 +828,15 @@
     </div>
   </section>
 
-  <!-- NEW: ID added so the nav link works -->
+  <!-- Why OpsFlo -->
   <section id="why-opsflo" class="diff" aria-label="OpsFlo vs everyone else">
     <div class="head">
       <h2>OpsFlo vs “ops help”</h2>
       <p>Most options improve pieces. OpsFlo owns the system end-to-end until it’s stable.</p>
 
-      <!-- NEW: CTA row under the header -->
+      <!-- CHANGE: learn/proof CTA here -->
       <div class="diff-cta" aria-label="Why OpsFlo CTA">
-        <a class="btn-primary" href="#discovery">👉 Talk to an operator</a>
+        <a class="btn-primary" href="#outcomes">See the difference →</a>
         <a class="btn-secondary" href="#what-we-do">📌 What we do</a>
       </div>
     </div>
@@ -908,7 +912,7 @@
         <h3>One-node fulfillment couldn’t keep up</h3>
         <p class="micro"><strong>Problem:</strong> Shipping zones drove slow delivery + rising costs; inventory placement was reactive.</p>
         <p class="micro"><strong>Action:</strong> Transitioned from 1 to 3 nodes, rebalanced inventory, and implemented order routing logic.</p>
-        <p class="impact"><strong>Result:</strong> Delivery timesimes improved <strong>45%</strong>; annual savings of <strong>$1.2M</strong>.</p>
+        <p class="impact"><strong>Result:</strong> Delivery times improved <strong>45%</strong>; annual savings of <strong>$1.2M</strong>.</p>
       </div>
 
       <div class="case">
@@ -947,13 +951,15 @@
 
   <section id="discovery" class="cta">
     <div class="cta-inner">
-      <!-- ✅ UPDATED: Headline is now problem/outcome oriented (not the CTA phrase) -->
+      <!-- remove "Talk to an operator" from headline -->
       <h2>Ready to fix ops?</h2>
       <p class="cta-sub">A quick 30-minute conversation to pressure-test priorities, identify what’s breaking, and map next steps.</p>
 
       <div class="cta-actions">
+        <!-- KEEP "Talk to an operator" here (primary) -->
         <a class="cta-button btn-operator" href="https://calendly.com/opsflo-consulting/opsflo-ops-diagnostic" target="_blank" rel="noopener">👉 Talk to an operator</a>
-        <a class="btn-outline" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Talk%20to%20an%20operator">Email Travis@opsflo.co</a>
+        <!-- remove "Talk to an operator" from email subject -->
+        <a class="btn-outline" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Operations%20Diagnostic">Email Travis@opsflo.co</a>
       </div>
 
       <div class="cta-tags">
@@ -973,7 +979,7 @@
       </div>
 
       <div class="social">
-        <a href="mailto:Travis@opsflo.co" aria-label="Email">
+        <a href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Operations%20Diagnostic" aria-label="Email">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
           </svg>
@@ -988,9 +994,10 @@
   </footer>
 
   <!-- Sticky mobile CTA -->
-  <div id="stickyCta" class="sticky-cta" aria-label="Talk to an operator sticky CTA">
+  <div id="stickyCta" class="sticky-cta" aria-label="Sticky CTA">
+    <!-- KEEP "Talk to an operator" here (primary) -->
     <a class="sticky-btn" href="#discovery">👉 Talk to an operator</a>
-    <div class="sticky-note">Opens the 30-minute diagnostic section</div>
+    <div class="sticky-note">Opens the diagnostic section</div>
   </div>
 
   <script>
