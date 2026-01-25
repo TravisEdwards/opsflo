@@ -10,7 +10,7 @@
   <meta name="keywords" content="embedded operating leadership, fractional COO, Head of Operations, CPG operations, supply chain leadership, fulfillment operations, 3PL management, inventory accuracy, ERP WMS, CX operations" />
   <link rel="canonical" href="https://opsflo.co/" />
 
-  <!-- Open Graph (LinkedIn, Slack, iMessage, WhatsApp) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="OpsFlo" />
   <meta property="og:title" content="Embedded Operating Leadership for CPG Brands | OpsFlo" />
@@ -35,7 +35,7 @@
   <!-- Browser UI color -->
   <meta name="theme-color" content="#041E33" />
 
-  <!-- Structured Data (helps Google + AI understand what OpsFlo is) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,19 +44,14 @@
     "url": "https://opsflo.co/",
     "logo": "https://opsflo.co/assets/opsflo-logo.png",
     "description": "Head of Operations / COO leadership for scaling CPG & DTC brands. OpsFlo steps in, owns execution across supply chain and operations, and builds the system so the business runs without founder escalation.",
-    "founder": {
-      "@type": "Person",
-      "name": "Travis Edwards"
-    },
+    "founder": { "@type": "Person", "name": "Travis Edwards" },
     "areaServed": "Global",
     "contactPoint": [{
       "@type": "ContactPoint",
       "contactType": "sales",
       "email": "Travis@opsflo.co"
     }],
-    "sameAs": [
-      "https://www.linkedin.com/in/travis-edwards-b594805/"
-    ],
+    "sameAs": ["https://www.linkedin.com/in/travis-edwards-b594805/"],
     "knowsAbout": [
       "Supply Chain Operations",
       "Fulfillment & Logistics",
@@ -70,7 +65,6 @@
   }
   </script>
 
-  <!-- Outcomes WebPage Schema (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -89,11 +83,7 @@
       "COGS reduction",
       "customer experience improvement"
     ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "OpsFlo",
-      "url": "https://opsflo.co/"
-    }
+    "publisher": { "@type": "Organization", "name": "OpsFlo", "url": "https://opsflo.co/" }
   }
   </script>
 
@@ -122,8 +112,6 @@
 
     /* Header */
     header{background:var(--navy);color:var(--white)}
-
-    /* Desktop nav never breaks words; header can scroll instead of wrapping */
     .wrap{
       max-width:1160px;
       margin:0 auto;
@@ -137,11 +125,9 @@
     }
     .wrap::-webkit-scrollbar{display:none}
     .wrap{scrollbar-width:none}
-
     .left{display:flex;align-items:center;gap:10px;flex:0 0 auto}
     .logo{height:40px;width:auto;border-radius:6px;object-fit:contain;flex:0 0 auto}
 
-    /* Brand block */
     .brand{
       display:inline-flex;
       flex-direction:column;
@@ -155,12 +141,8 @@
     }
     .brand__name{font-weight:800;font-size:20px;letter-spacing:.2px;color:inherit}
     .brand__descriptor{
-      font-size:10px;
-      letter-spacing:0.10em;
-      text-transform:uppercase;
-      opacity:.65;
-      white-space:nowrap;
-      color:inherit;
+      font-size:10px;letter-spacing:0.10em;text-transform:uppercase;opacity:.65;
+      white-space:nowrap;color:inherit
     }
 
     nav{
@@ -181,7 +163,6 @@
       font-size:15px;
       letter-spacing:.01em;
     }
-
     .nav-cta{
       padding:10px 14px;
       border-radius:999px;
@@ -203,26 +184,17 @@
     }
     .hero-inner{max-width:920px;margin:0 auto}
     .hero-eyebrow{
-      font-size:14px;
-      font-weight:800;
-      letter-spacing:.14em;
-      text-transform:uppercase;
+      font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
       margin-bottom:22px;
       background:linear-gradient(90deg,var(--green),#8ec5ff);
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
     .hero h1{font-size:48px;line-height:1.1;margin:0 0 18px;letter-spacing:-.02em}
-
     .hero-subhead{
-      font-size:18px;
-      line-height:1.6;
-      color:#d7e6f5;
-      max-width:820px;
-      margin:0 auto 20px;
+      font-size:18px;line-height:1.6;color:#d7e6f5;
+      max-width:820px;margin:0 auto 20px;
     }
-
-    /* Signature divider */
     .signature-line{
       margin:22px auto 0;
       padding-top:16px;
@@ -239,7 +211,6 @@
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
-
     .cta-button{
       display:inline-block;
       padding:16px 34px;
@@ -286,15 +257,13 @@
       box-shadow:0 10px 28px rgba(0,0,0,.22);
     }
     .how-kicker{
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:#8ec5ff;
-      margin-bottom:10px;
+      font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+      color:#8ec5ff;margin-bottom:10px;
     }
     .how-title{margin:0 0 8px;font-size:18px;font-weight:900;color:#fff}
-    .how-body{margin:0;color:rgba(230,240,255,.82);line-height:1.6;font-size:14px}
+    .how-body{
+      margin:0;color:rgba(230,240,255,.82);line-height:1.6;font-size:14px;
+    }
     .how-body ul{margin:10px 0 0; padding-left:18px}
     .how-body li{margin:6px 0}
 
@@ -310,7 +279,6 @@
     .what-lead{font-size:18px;line-height:1.6;color:#1f3b57;margin:0 0 10px}
     .what-sub{font-size:16px;line-height:1.6;color:#4f5b66;margin:0}
 
-    /* Generic cards/grid */
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
     .card{border:1px solid var(--line);border-radius:14px;padding:16px;background:#ffffff}
     .card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
@@ -340,15 +308,10 @@
     .featured-offer > *{position:relative;z-index:1}
 
     .featured-eyebrow{
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:.18em;
-      text-transform:uppercase;
+      font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;
       color:rgba(230,240,255,.78);
       margin:0 0 10px;
-      display:flex;
-      align-items:center;
-      gap:10px;
+      display:flex;align-items:center;gap:10px;
     }
     .featured-eyebrow .dot{
       height:10px;width:10px;border-radius:999px;
@@ -356,7 +319,6 @@
       box-shadow:0 0 0 6px rgba(142,197,255,.10);
       flex:0 0 auto;
     }
-
     .featured-title{
       margin:0 0 10px;
       font-size:26px;
@@ -376,7 +338,6 @@
       font-size:16px;
       max-width:920px;
     }
-
     .featured-grid{
       display:grid;
       grid-template-columns: 1.2fr .8fr;
@@ -384,7 +345,6 @@
       align-items:start;
       margin-top:10px;
     }
-
     .featured-bullets{
       margin:0;
       padding-left:18px;
@@ -417,14 +377,12 @@
       box-shadow:0 14px 28px rgba(0,0,0,.35);
     }
     .featured-actions .btn-primary:hover{transform:translateY(-1px);filter:brightness(1.03)}
-
     .featured-note{
       margin:10px 0 0;
       font-size:12px;
       line-height:1.5;
       color:rgba(230,240,255,.70);
     }
-
     .what-grid{margin-top:18px;text-align:left}
 
     /* DIFFERENTIATION */
@@ -491,7 +449,7 @@
     .bio .links{margin-top:10px}
     .bio a{color:#0b7cff;text-decoration:underline}
 
-    /* CTA */
+    /* CTA (Discovery) */
     #discovery.cta{background:var(--ice);padding:84px 0;border-top:1px solid rgba(0,0,0,.04);border-bottom:1px solid rgba(0,0,0,.04)}
     #discovery .cta-inner{max-width:1080px;margin:0 auto;text-align:center;padding:0 16px}
     #discovery h2{color:#0f172a;font-size:44px;line-height:1.1;font-weight:900;letter-spacing:-.02em;margin:0 0 14px}
@@ -574,7 +532,6 @@
       .hero .cta-button{display:none}
       .sticky-cta{display:block}
       body{padding-bottom:84px}
-
       .featured-offer{padding:18px}
       .featured-title{font-size:22px}
     }
@@ -586,7 +543,6 @@
     <div class="wrap">
       <div class="left">
         <img class="logo" src="assets/opsflo-logo.png" alt="OpsFlo logo" onerror="this.style.display='none'" />
-
         <a class="brand" href="/" aria-label="OpsFlo home">
           <span class="brand__name">OpsFlo</span>
           <span class="brand__descriptor">Embedded Operating Leadership</span>
@@ -599,6 +555,7 @@
         <a href="#why-opsflo">Why OpsFlo</a>
         <a href="#outcomes">Outcomes</a>
         <a href="#cases">Case Studies</a>
+        <!-- KEEP: primary CTA -->
         <a href="#discovery" class="nav-cta">👉 Talk to an operator</a>
         <a class="nav-email" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Talk%20to%20an%20operator">Email</a>
       </nav>
@@ -608,7 +565,6 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-eyebrow">INDEPENDENT OPERATING LEADERSHIP</div>
-
       <h1>Operations shouldn’t depend on you.</h1>
 
       <p class="hero-subhead">
@@ -620,7 +576,7 @@
         Consultants recommend. Vendors optimize. <strong>OpsFlo owns.</strong>
       </p>
 
-      <!-- Hero CTA is learn/proof -->
+      <!-- KEEP: learn/proof CTA (not book) -->
       <a href="#how-it-works" class="cta-button" style="margin-top:24px;">See how it works →</a>
       <div class="hero-cta-micro">Understand the model before you book a call.</div>
 
@@ -670,7 +626,7 @@
         </div>
       </div>
 
-      <!-- ✅ REMOVED: how section CTA button (to reduce CTA clutter) -->
+      <!-- REMOVED: How section CTA button (kills CTA clutter) -->
     </div>
   </section>
 
@@ -699,8 +655,10 @@
           </ul>
 
           <div class="featured-actions">
+            <!-- KEEP: different intent CTA -->
             <a class="btn-primary" href="https://calendly.com/opsflo-consulting/parcel-cost-reset-diagnostic" target="_blank" rel="noopener">🚚 Start with a Parcel Diagnostic</a>
 
+            <!-- REMOVED: secondary "Talk to an operator" -->
             <div class="featured-note">
               Note: Rates are never shared as a standalone deliverable. Deployment follows diagnostic approval to protect service and ensure savings hold.
             </div>
@@ -757,8 +715,7 @@
     <div class="head">
       <h2>OpsFlo vs “ops help”</h2>
       <p>Most options improve pieces. OpsFlo owns the system end-to-end until it’s stable.</p>
-
-      <!-- ✅ REMOVED: why opsflo CTA row (to reduce CTA clutter) -->
+      <!-- REMOVED: Why OpsFlo CTA row -->
     </div>
 
     <div class="diff-grid">
@@ -871,10 +828,12 @@
 
   <section id="discovery" class="cta">
     <div class="cta-inner">
-      <h2> 👉 Talk to an operator</h2>
+      <!-- UPDATED: headline no longer repeats "Talk to an operator" -->
+      <h2>Ready to fix ops?</h2>
       <p class="cta-sub">A quick 30-minute conversation to pressure-test priorities, identify what’s breaking, and map next steps.</p>
 
       <div class="cta-actions">
+        <!-- KEEP: primary CTA -->
         <a class="cta-button btn-operator" href="https://calendly.com/opsflo-consulting/opsflo-ops-diagnostic" target="_blank" rel="noopener">👉 Talk to an operator</a>
         <a class="btn-outline" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Talk%20to%20an%20operator">Email Travis@opsflo.co</a>
       </div>
