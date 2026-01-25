@@ -123,7 +123,7 @@
     /* Header */
     header{background:var(--navy);color:var(--white)}
 
-    /* ✅ BEST FIX: desktop nav never breaks words; header can scroll instead of wrapping */
+    /* Desktop nav never breaks words; header can scroll instead of wrapping */
     .wrap{
       max-width:1160px;
       margin:0 auto;
@@ -131,8 +131,8 @@
       display:flex;
       align-items:center;
       gap:12px;
-      flex-wrap:nowrap;          /* keep one row */
-      overflow-x:auto;           /* if tight, scroll instead of wrapping */
+      flex-wrap:nowrap;
+      overflow-x:auto;
       -webkit-overflow-scrolling:touch;
     }
     .wrap::-webkit-scrollbar{display:none}
@@ -153,12 +153,7 @@
       transform:translateY(1px);
       flex:0 0 auto;
     }
-    .brand__name{
-      font-weight:800;
-      font-size:20px;
-      letter-spacing:.2px;
-      color:inherit;
-    }
+    .brand__name{font-weight:800;font-size:20px;letter-spacing:.2px;color:inherit}
     .brand__descriptor{
       font-size:10px;
       letter-spacing:0.10em;
@@ -168,7 +163,6 @@
       color:inherit;
     }
 
-    /* ✅ BEST FIX: nav stays one line + no word splitting */
     nav{
       margin-left:auto;
       display:flex;
@@ -228,7 +222,7 @@
       margin:0 auto 20px;
     }
 
-    /* Signature divider (for the bottom line) */
+    /* Signature divider */
     .signature-line{
       margin:22px auto 0;
       padding-top:16px;
@@ -299,26 +293,10 @@
       color:#8ec5ff;
       margin-bottom:10px;
     }
-    .how-title{
-      margin:0 0 8px;
-      font-size:18px;
-      font-weight:900;
-      color:#fff;
-    }
-    .how-body{
-      margin:0;
-      color:rgba(230,240,255,.82);
-      line-height:1.6;
-      font-size:14px;
-    }
+    .how-title{margin:0 0 8px;font-size:18px;font-weight:900;color:#fff}
+    .how-body{margin:0;color:rgba(230,240,255,.82);line-height:1.6;font-size:14px}
     .how-body ul{margin:10px 0 0; padding-left:18px}
     .how-body li{margin:6px 0}
-    .how-cta{
-      margin-top:22px;
-      text-align:center;
-    }
-    .how-cta .cta-button{padding:15px 30px}
-    .how-cta .how-cta-micro{margin-top:10px;color:rgba(230,240,255,.72);font-size:13px}
 
     /* WHAT WE DO */
     .what-we-do{
@@ -334,16 +312,11 @@
 
     /* Generic cards/grid */
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:16px;
-      background:#ffffff;
-    }
+    .card{border:1px solid var(--line);border-radius:14px;padding:16px;background:#ffffff}
     .card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
     .card p{margin:0;font-size:15px;line-height:1.6;color:#334155}
 
-    /* ===== Featured Offer (navy gradient block) ===== */
+    /* Featured Offer */
     .featured-offer{
       margin:26px auto 0;
       max-width:980px;
@@ -444,12 +417,6 @@
       box-shadow:0 14px 28px rgba(0,0,0,.35);
     }
     .featured-actions .btn-primary:hover{transform:translateY(-1px);filter:brightness(1.03)}
-    .featured-actions .btn-secondary{
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.18);
-      color:#e6f0ff;
-    }
-    .featured-actions .btn-secondary:hover{transform:translateY(-1px);filter:brightness(1.02)}
 
     .featured-note{
       margin:10px 0 0;
@@ -458,7 +425,6 @@
       color:rgba(230,240,255,.70);
     }
 
-    /* tighten the grid spacing below the featured offer */
     .what-grid{margin-top:18px;text-align:left}
 
     /* DIFFERENTIATION */
@@ -475,41 +441,8 @@
     .diff-opsflo .diff-label{color:#0f2e25}
     .diff-footer{text-align:center;margin-top:18px;color:#4f5b56;font-size:14px}
 
-    /* CTA row under diff header */
-    .diff-cta{
-      margin-top:14px;
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    .diff-cta a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px 18px;
-      border-radius:999px;
-      font-weight:900;
-      white-space:nowrap;
-      transition:transform .15s ease, filter .15s ease, opacity .15s ease;
-    }
-    .diff-cta .btn-primary{
-      background:linear-gradient(90deg,var(--green),#8ec5ff);
-      color:#041E33;
-      box-shadow:0 14px 28px rgba(0,0,0,.16);
-    }
-    .diff-cta .btn-primary:hover{transform:translateY(-1px);filter:brightness(1.03)}
-    .diff-cta .btn-secondary{
-      background:#fff;
-      border:1px solid rgba(4,30,51,.18);
-      color:#123a63;
-    }
-    .diff-cta .btn-secondary:hover{transform:translateY(-1px);filter:brightness(1.02)}
-
     /* Generic sections */
     section.section{padding:48px 16px;max-width:1160px;margin:0 auto}
-    .section-title{font-size:32px;font-weight:900;color:var(--navy);margin:0 0 4px}
-    .wave-divider{width:80px;height:4px;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--green));margin-bottom:16px}
     .sub{margin:0 0 16px;color:#3f4b56}
 
     /* Outcomes */
@@ -629,7 +562,6 @@
       header .wrap{flex-direction:column;align-items:flex-start;gap:10px;overflow-x:visible}
       .left{width:100%;align-items:center;justify-content:flex-start;gap:8px}
       .brand__name{font-size:18px}
-      /* mobile can wrap */
       nav{width:100%;display:flex;flex-wrap:wrap;gap:8px;margin-left:0}
       nav a{font-size:14px;padding:6px 10px;white-space:normal}
       .nav-cta,.nav-email{flex:1 1 100%;text-align:center;justify-content:center}
@@ -667,10 +599,8 @@
         <a href="#why-opsflo">Why OpsFlo</a>
         <a href="#outcomes">Outcomes</a>
         <a href="#cases">Case Studies</a>
-        <!-- KEEP "Talk to an operator" here (primary) -->
         <a href="#discovery" class="nav-cta">👉 Talk to an operator</a>
-        <!-- remove "Talk to an operator" from email subject -->
-        <a class="nav-email" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Operations%20Diagnostic">Email</a>
+        <a class="nav-email" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Talk%20to%20an%20operator">Email</a>
       </nav>
     </div>
   </header>
@@ -690,7 +620,7 @@
         Consultants recommend. Vendors optimize. <strong>OpsFlo owns.</strong>
       </p>
 
-      <!-- HERO CTA (learn) -->
+      <!-- Hero CTA is learn/proof -->
       <a href="#how-it-works" class="cta-button" style="margin-top:24px;">See how it works →</a>
       <div class="hero-cta-micro">Understand the model before you book a call.</div>
 
@@ -740,11 +670,7 @@
         </div>
       </div>
 
-      <!-- CHANGE: learn/proof CTA (no "Talk to an operator" here) -->
-      <div class="how-cta">
-        <a href="#outcomes" class="cta-button">What happens in the first 30 days →</a>
-        <div class="how-cta-micro">See the diagnostic outputs + typical outcomes.</div>
-      </div>
+      <!-- ✅ REMOVED: how section CTA button (to reduce CTA clutter) -->
     </div>
   </section>
 
@@ -774,8 +700,7 @@
 
           <div class="featured-actions">
             <a class="btn-primary" href="https://calendly.com/opsflo-consulting/parcel-cost-reset-diagnostic" target="_blank" rel="noopener">🚚 Start with a Parcel Diagnostic</a>
-            <!-- CHANGE: secondary button is learn/proof CTA -->
-            <a class="btn-secondary" href="#cases">How savings are protected →</a>
+
             <div class="featured-note">
               Note: Rates are never shared as a standalone deliverable. Deployment follows diagnostic approval to protect service and ensure savings hold.
             </div>
@@ -828,17 +753,12 @@
     </div>
   </section>
 
-  <!-- Why OpsFlo -->
   <section id="why-opsflo" class="diff" aria-label="OpsFlo vs everyone else">
     <div class="head">
       <h2>OpsFlo vs “ops help”</h2>
       <p>Most options improve pieces. OpsFlo owns the system end-to-end until it’s stable.</p>
 
-      <!-- CHANGE: learn/proof CTA here -->
-      <div class="diff-cta" aria-label="Why OpsFlo CTA">
-        <a class="btn-primary" href="#outcomes">See the difference →</a>
-        <a class="btn-secondary" href="#what-we-do">📌 What we do</a>
-      </div>
+      <!-- ✅ REMOVED: why opsflo CTA row (to reduce CTA clutter) -->
     </div>
 
     <div class="diff-grid">
@@ -951,15 +871,12 @@
 
   <section id="discovery" class="cta">
     <div class="cta-inner">
-      <!-- remove "Talk to an operator" from headline -->
-      <h2>Ready to fix ops?</h2>
+      <h2> 👉 Talk to an operator</h2>
       <p class="cta-sub">A quick 30-minute conversation to pressure-test priorities, identify what’s breaking, and map next steps.</p>
 
       <div class="cta-actions">
-        <!-- KEEP "Talk to an operator" here (primary) -->
         <a class="cta-button btn-operator" href="https://calendly.com/opsflo-consulting/opsflo-ops-diagnostic" target="_blank" rel="noopener">👉 Talk to an operator</a>
-        <!-- remove "Talk to an operator" from email subject -->
-        <a class="btn-outline" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Operations%20Diagnostic">Email Travis@opsflo.co</a>
+        <a class="btn-outline" href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Talk%20to%20an%20operator">Email Travis@opsflo.co</a>
       </div>
 
       <div class="cta-tags">
@@ -979,7 +896,7 @@
       </div>
 
       <div class="social">
-        <a href="mailto:Travis@opsflo.co?subject=OpsFlo%20-%20Operations%20Diagnostic" aria-label="Email">
+        <a href="mailto:Travis@opsflo.co" aria-label="Email">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
           </svg>
@@ -994,10 +911,9 @@
   </footer>
 
   <!-- Sticky mobile CTA -->
-  <div id="stickyCta" class="sticky-cta" aria-label="Sticky CTA">
-    <!-- KEEP "Talk to an operator" here (primary) -->
+  <div id="stickyCta" class="sticky-cta" aria-label="Talk to an operator sticky CTA">
     <a class="sticky-btn" href="#discovery">👉 Talk to an operator</a>
-    <div class="sticky-note">Opens the diagnostic section</div>
+    <div class="sticky-note">Opens the 30-minute diagnostic section</div>
   </div>
 
   <script>
