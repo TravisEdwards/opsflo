@@ -175,24 +175,42 @@
     .nav-cta:hover{opacity:.98;transform:translateY(-1px)}
     .nav-email{border:1px solid #28405a;color:#e6f0ff;padding:9px 13px;border-radius:999px;font-weight:800;white-space:nowrap}
 
-    /* HERO */
+    /* HERO (best-in-class hierarchy) */
     .hero{
       background:linear-gradient(180deg,var(--navy-2) 0%, var(--navy) 70%);
       color:#fff;
-      padding:96px 16px 78px;
+      padding:92px 16px 72px;
       text-align:center;
     }
-    .hero-inner{max-width:920px;margin:0 auto}
+    .hero-inner{max-width:900px;margin:0 auto}
 
-    .hero h1{font-size:48px;line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
+    .hero h1{
+      font-size:52px;
+      line-height:1.06;
+      margin:0 0 14px;
+      letter-spacing:-.03em;
+    }
 
-    /* NEW: put the “Consultants…OpsFlo owns.” line directly under the H1 */
-    .signature-line{
+    /* Step-in statement (1 clean sentence) */
+    .hero-subhead{
+      font-size:18px;
+      line-height:1.65;
+      color:#d7e6f5;
+      max-width:820px;
       margin:0 auto 18px;
+    }
+    .hero-subhead strong{
+      color:#e6f0ff;
+      font-weight:900;
+    }
+
+    /* Punchline last */
+    .signature-line{
+      margin:0 auto 26px;
       max-width:820px;
       font-size:18px;
-      font-weight:800;
-      letter-spacing:.02em;
+      font-weight:850;
+      letter-spacing:.01em;
       color:#e6f0ff;
       text-align:center;
     }
@@ -200,14 +218,6 @@
       background:linear-gradient(90deg,var(--green),#8ec5ff);
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
-    }
-
-    .hero-subhead{
-      font-size:18px;
-      line-height:1.65;
-      color:#d7e6f5;
-      max-width:820px;
-      margin:0 auto 24px;
     }
 
     .cta-button{
@@ -223,7 +233,16 @@
     }
     .cta-button:hover{transform:translateY(-1px);box-shadow:0 18px 40px rgba(0,0,0,.4);opacity:.98}
 
+    .hero-cta-micro{
+      margin-top:10px;
+      font-size:14px;
+      color:#9fc1ea;
+    }
+
     .hero-note{margin-top:16px;font-size:14px;color:#9fc1ea}
+
+    /* Desktop-only hero CTA helper */
+    .hero-desktop-cta{display:inline-block}
 
     /* HOW IT WORKS */
     .how{
@@ -521,14 +540,25 @@
       .brand__name{font-size:18px}
       nav{width:100%;display:flex;flex-wrap:wrap;gap:8px;margin-left:0}
       nav a{font-size:14px;padding:6px 10px;white-space:normal}
-      .nav-cta,.nav-email{flex:1 1 100%;text-align:center;justify-content:center}
-      .hero h1{font-size:34px}
-      .signature-line{font-size:15px;margin-bottom:14px}
-      .hero-subhead{font-size:15px}
+
+      /* Clean up header on mobile */
+      .nav-email{display:none}
+      .nav-cta{flex:1 1 100%;text-align:center;justify-content:center}
+
+      /* HERO: remove extra elements + tighten spacing */
+      .hero{padding:52px 16px 44px}
+      .hero h1{font-size:34px;line-height:1.08;margin:0 0 10px}
+      .hero-subhead{font-size:15px;line-height:1.6;margin:0 auto 14px}
+      .signature-line{font-size:16px;line-height:1.35;margin:0 auto 0;max-width:360px}
+
+      /* No hero CTA on mobile (header + sticky handle action) */
+      .hero-desktop-cta{display:none}
+      .hero-note{display:none}
+
       #discovery h2{font-size:34px}
       #discovery .cta-sub{font-size:18px}
       #discovery .btn-operator,.btn-outline{width:100%;min-width:0}
-      .hero .cta-button{display:none}
+
       .sticky-cta{display:block}
       body{padding-bottom:84px}
       .featured-offer{padding:18px}
@@ -561,21 +591,22 @@
     </div>
   </header>
 
-  <!-- UPDATED HERO (simple + strong) -->
+  <!-- UPDATED HERO (best-in-class: step-in first, punchline after) -->
   <section class="hero">
     <div class="hero-inner">
       <h1>Operations shouldn’t depend on you.</h1>
+
+      <p class="hero-subhead">
+        We step in as <strong>Head of Ops / COO</strong>—owning supply chain + operations so the business runs without founder escalation.
+      </p>
 
       <p class="signature-line">
         Consultants recommend. Vendors optimize. <strong>OpsFlo owns.</strong>
       </p>
 
-      <p class="hero-subhead">
-        <strong>Head of Ops / COO leadership for scaling CPG &amp; DTC brands.</strong><br/>
-        We step in, own execution across supply chain and operations, and build systems that run without founder escalation.
-      </p>
-
-      <a href="#how-it-works" class="cta-button">See how it works →</a>
+      <!-- Desktop-only “continue” CTA -->
+      <a href="#how-it-works" class="cta-button hero-desktop-cta">See how it works →</a>
+      <div class="hero-cta-micro hero-desktop-cta">Understand the model before you book a call.</div>
 
       <div class="hero-note">🌴 Based in Los Angeles. Partnering with brands worldwide.</div>
     </div>
