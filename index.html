@@ -320,7 +320,7 @@
       box-shadow:0 18px 44px rgba(0,0,0,.22);
       position:relative;
       overflow:hidden;
-      min-height: 320px;
+      min-height: 0;
     }
     .featured-offer::before{
       content:"";
@@ -407,6 +407,28 @@
       font-size:12px;
       line-height:1.5;
       color:rgba(230,240,255,.70);
+    }
+
+    /* === Featured Offers: Compact Mode Overrides (NEW) === */
+    .featured-offer{ padding:18px; }
+    .featured-title{ font-size:22px; margin-bottom:8px; }
+    .featured-sub{ font-size:14px; margin-bottom:10px; }
+    .featured-grid{ gap:14px; margin-top:8px; }
+    .featured-bullets{ font-size:13px; line-height:1.45; }
+    .featured-bullets li{ margin:4px 0; }
+
+    /* Clamp notes to 2 lines */
+    .featured-note{
+      display:-webkit-box;
+      -webkit-box-orient:vertical;
+      -webkit-line-clamp:2;
+      overflow:hidden;
+    }
+
+    /* Full-width, same-height CTAs */
+    .featured-actions a{
+      width:100%;
+      min-height:44px;
     }
 
     /* Keep the offer cards stacked on mobile */
@@ -574,8 +596,6 @@
 
       .sticky-cta{display:block}
       body{padding-bottom:84px}
-      .featured-offer{padding:18px}
-      .featured-title{font-size:22px}
     }
   </style>
 </head>
@@ -680,7 +700,7 @@
 
       <!-- Featured Offers (Parcel left, 3PL right) -->
       <div class="featured-duo" aria-label="Featured Offers">
-        <!-- LEFT: Parcel Cost Reset (tuned slightly for symmetry) -->
+        <!-- LEFT: Parcel Cost Reset (compact bullets) -->
         <div class="featured-offer" aria-label="Featured Offer Parcel Cost Reset">
           <div class="featured-eyebrow"><span class="dot"></span>FEATURED OFFER</div>
           <h3 class="featured-title"><span class="bolt">⚡</span>Parcel Cost Reset</h3>
@@ -692,9 +712,9 @@
           <div class="featured-grid">
             <ul class="featured-bullets">
               <li>Enterprise-level parcel pricing</li>
-              <li>No minimums or volume commitments</li>
-              <li>No hidden accessorial surprises</li>
-              <li>Routing + service safeguards (so savings don’t create CX risk)</li>
+              <li>No minimums or commitments</li>
+              <li>No surprise accessorial fees</li>
+              <li>Routing + service safeguards</li>
             </ul>
 
             <div class="featured-actions">
@@ -706,28 +726,26 @@
           </div>
         </div>
 
-        <!-- RIGHT: 3PL Transition Reset (new, perfectly tight copy) -->
+        <!-- RIGHT: 3PL Transition Reset (exact copy, tight) -->
         <div class="featured-offer" aria-label="Featured Offer 3PL Transition Reset">
           <div class="featured-eyebrow"><span class="dot"></span>FEATURED OFFER</div>
           <h3 class="featured-title"><span class="bolt">📦</span>3PL Transition Reset</h3>
           <p class="featured-sub">
-            Find and transition to the right 3PL — without founder escalation or failed cutovers.
-            OpsFlo runs selection, normalizes true cost, and owns go-live execution.
+            Select and transition to the right 3PL—without founder escalation. OpsFlo normalizes true cost and owns go-live execution.
           </p>
 
           <div class="featured-grid">
             <ul class="featured-bullets">
-              <li>RFP + shortlist + site calls (no vendor chaos)</li>
-              <li>True-cost comparison (fees, assumptions, risk)</li>
-              <li>SLA + scorecard baked into the decision</li>
-              <li>Cutover plan + stabilization so the warehouse actually works</li>
+              <li>RFP + shortlist + site calls</li>
+              <li>True-cost comparison</li>
+              <li>SLA + scorecard baked in</li>
+              <li>Cutover plan + stabilization</li>
             </ul>
 
             <div class="featured-actions">
-              <!-- Uses your existing discovery section so it never breaks -->
               <a class="btn-primary" href="#discovery">📦 Start with a 3PL Transition Diagnostic</a>
               <div class="featured-note">
-                Note: This is operating ownership — not a broker intro. Scope and timeline are confirmed after intake.
+                Operating ownership—not a broker intro. Scope + timeline confirmed after intake.
               </div>
             </div>
           </div>
