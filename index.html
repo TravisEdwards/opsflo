@@ -302,10 +302,16 @@
     .card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
     .card p{margin:0;font-size:15px;line-height:1.6;color:#334155}
 
-    /* Featured Offer */
-    .featured-offer{
+    /* Featured Offers (DUO) */
+    .featured-duo{
       margin:26px auto 0;
       max-width:980px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .featured-offer{
       text-align:left;
       border-radius:18px;
       padding:22px;
@@ -314,6 +320,7 @@
       box-shadow:0 18px 44px rgba(0,0,0,.22);
       position:relative;
       overflow:hidden;
+      min-height: 320px;
     }
     .featured-offer::before{
       content:"";
@@ -358,7 +365,7 @@
     }
     .featured-grid{
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1.15fr .85fr;
       gap:16px;
       align-items:start;
       margin-top:10px;
@@ -401,6 +408,12 @@
       line-height:1.5;
       color:rgba(230,240,255,.70);
     }
+
+    /* Keep the offer cards stacked on mobile */
+    @media (max-width: 860px){
+      .featured-duo{grid-template-columns:1fr}
+    }
+
     .what-grid{margin-top:18px;text-align:left}
 
     /* DIFFERENTIATION */
@@ -665,30 +678,57 @@
       <p class="what-lead">You’re not buying “projects.” You’re getting an operator accountable for outcomes across the stack.</p>
       <p class="what-sub">OpsFlo can embed end-to-end or lead focused initiatives during growth, transition, or operational strain.</p>
 
-      <!-- Featured Offer -->
-      <div class="featured-offer" aria-label="Featured Offer Parcel Cost Reset">
-        <div class="featured-eyebrow"><span class="dot"></span>FEATURED OFFER</div>
-        <h3 class="featured-title"><span class="bolt">⚡</span>Parcel Cost Reset</h3>
-        <p class="featured-sub">
-          Unlock enterprise-level parcel pricing that small and mid-size brands can’t access on their own —
-          deployed <strong>after a paid diagnostic</strong> to protect service and ensure savings stick.
-        </p>
+      <!-- Featured Offers (Parcel left, 3PL right) -->
+      <div class="featured-duo" aria-label="Featured Offers">
+        <!-- LEFT: Parcel Cost Reset (tuned slightly for symmetry) -->
+        <div class="featured-offer" aria-label="Featured Offer Parcel Cost Reset">
+          <div class="featured-eyebrow"><span class="dot"></span>FEATURED OFFER</div>
+          <h3 class="featured-title"><span class="bolt">⚡</span>Parcel Cost Reset</h3>
+          <p class="featured-sub">
+            Unlock enterprise-level parcel pricing that small and mid-size brands can’t access on their own —
+            deployed <strong>after a paid diagnostic</strong> to protect service and ensure savings stick.
+          </p>
 
-        <div class="featured-grid">
-          <ul class="featured-bullets">
-            <li>Enterprise-level parcel pricing</li>
-            <li>No minimums or volume commitments</li>
-            <li>No hidden accessorial surprises</li>
-            <li>Routing + service safeguards (so savings don’t create CX risk)</li>
-          </ul>
+          <div class="featured-grid">
+            <ul class="featured-bullets">
+              <li>Enterprise-level parcel pricing</li>
+              <li>No minimums or volume commitments</li>
+              <li>No hidden accessorial surprises</li>
+              <li>Routing + service safeguards (so savings don’t create CX risk)</li>
+            </ul>
 
-          <div class="featured-actions">
-            <!-- KEEP: different intent CTA -->
-            <a class="btn-primary" href="https://calendly.com/opsflo-consulting/parcel-cost-reset-diagnostic" target="_blank" rel="noopener">🚚 Start with a Parcel Diagnostic</a>
+            <div class="featured-actions">
+              <a class="btn-primary" href="https://calendly.com/opsflo-consulting/parcel-cost-reset-diagnostic" target="_blank" rel="noopener">🚚 Start with a Parcel Diagnostic</a>
+              <div class="featured-note">
+                Note: Rates are never shared as a standalone deliverable. Deployment follows diagnostic approval to protect service and ensure savings hold.
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <!-- REMOVED: secondary "Talk to an operator" -->
-            <div class="featured-note">
-              Note: Rates are never shared as a standalone deliverable. Deployment follows diagnostic approval to protect service and ensure savings hold.
+        <!-- RIGHT: 3PL Transition Reset (new, perfectly tight copy) -->
+        <div class="featured-offer" aria-label="Featured Offer 3PL Transition Reset">
+          <div class="featured-eyebrow"><span class="dot"></span>FEATURED OFFER</div>
+          <h3 class="featured-title"><span class="bolt">📦</span>3PL Transition Reset</h3>
+          <p class="featured-sub">
+            Find and transition to the right 3PL — without founder escalation or failed cutovers.
+            OpsFlo runs selection, normalizes true cost, and owns go-live execution.
+          </p>
+
+          <div class="featured-grid">
+            <ul class="featured-bullets">
+              <li>RFP + shortlist + site calls (no vendor chaos)</li>
+              <li>True-cost comparison (fees, assumptions, risk)</li>
+              <li>SLA + scorecard baked into the decision</li>
+              <li>Cutover plan + stabilization so the warehouse actually works</li>
+            </ul>
+
+            <div class="featured-actions">
+              <!-- Uses your existing discovery section so it never breaks -->
+              <a class="btn-primary" href="#discovery">📦 Start with a 3PL Transition Diagnostic</a>
+              <div class="featured-note">
+                Note: This is operating ownership — not a broker intro. Scope and timeline are confirmed after intake.
+              </div>
             </div>
           </div>
         </div>
