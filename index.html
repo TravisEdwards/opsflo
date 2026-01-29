@@ -413,6 +413,37 @@
     }
     .featured-cta.btn-primary:hover{transform:translateY(-1px);filter:brightness(1.03)}
 
+    /* NEW: connector line above the scope cards */
+    .scope-bridge{
+      margin:16px auto 0;
+      max-width:980px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:#1f3b57;
+      font-weight:900;
+      font-size:13px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      opacity:.9;
+      justify-content:center;
+    }
+    .scope-bridge::before,
+    .scope-bridge::after{
+      content:"";
+      height:1px;
+      flex:1 1 auto;
+      background:linear-gradient(90deg, transparent, rgba(4,30,51,.18), transparent);
+    }
+    .scope-bridge span{
+      padding:6px 12px;
+      border:1px solid rgba(4,30,51,.10);
+      border-radius:999px;
+      background:#ffffff;
+      box-shadow:0 8px 18px rgba(0,0,0,.04);
+      white-space:nowrap;
+    }
+
     /* Keep the offer cards stacked on mobile */
     @media (max-width: 860px){
       .featured-duo{grid-template-columns:1fr}
@@ -424,6 +455,12 @@
       .featured-sub{font-size:14px;max-width:none}
       .featured-bullets{font-size:14px}
       .featured-cta{font-size:16px;min-height:50px}
+
+      .scope-bridge{
+        font-size:12px;
+        letter-spacing:.12em;
+      }
+      .scope-bridge span{white-space:normal;text-align:center}
     }
 
     .what-grid{margin-top:18px;text-align:left}
@@ -740,6 +777,11 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- NEW: bridge line to keep full-scope in view -->
+      <div class="scope-bridge" aria-hidden="true">
+        <span>Once OpsFlo is embedded, ownership extends across:</span>
       </div>
 
       <!-- Capability grid -->
